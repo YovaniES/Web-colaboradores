@@ -1,0 +1,23 @@
+.cli-footer{
+  padding: 20px;
+  background-color: #2B3447;
+  color: #b6b7b7;
+  display: flex;
+  letter-spacing: 2px;
+
+  right: 0;
+  bottom: 0;
+
+}
+
+
+@media (max-width: 850px) {
+  .cli-footer {
+    font-size: 11px;
+    display: flex;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    letter-spacing: 2px;
+  }
+}

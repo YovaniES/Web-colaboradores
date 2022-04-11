@@ -1,0 +1,249 @@
+{
+  "UsuariosList": [
+    {
+      "nombre": "Diana Cordova",
+      "correo": "LADY@experis.com",
+      "pais": "URU",
+      "genero": "F",
+      "cargo": "analista",
+      "empresa": "EXPERIS",
+      "rol": "GESTOR",
+      "id": 1
+    },
+    {
+      "nombre": "Katerin V K",
+      "correo": "DIEGO@mbl.com",
+      "pais": "MEX",
+      "genero": "F",
+      "cargo": "Diseño UI",
+      "empresa": "MBL",
+      "rol": "USER",
+      "id": 2
+    },
+    {
+      "nombre": "Keny Suarez L.",
+      "correo": "LADY@experis.com",
+      "pais": "PER",
+      "genero": "M",
+      "cargo": "Analista",
+      "empresa": "EXPERIS",
+      "rol": "USER",
+      "id": 3
+    },
+    {
+      "nombre": "Miguel Cuenca H.",
+      "correo": "DANIEL@indracompany.com",
+      "pais": "URU",
+      "genero": "M",
+      "cargo": "scrum",
+      "empresa": "INDRA",
+      "rol": "USER",
+      "id": 4
+    },
+    {
+      "nombre": "Mariana Cuenca Ch.",
+      "correo": "DANIEL@indracompany.com",
+      "pais": "ARG",
+      "genero": "F",
+      "cargo": "Desarrollador Back",
+      "empresa": "INDRA",
+      "rol": "USER",
+      "id": 5
+    },
+    {
+      "nombre": "Ken Arteaga",
+      "correo": "DIEGO@mbl.com",
+      "pais": "URU",
+      "genero": "M",
+      "cargo": "Diseño UI",
+      "empresa": "MBL",
+      "rol": "USER",
+      "id": 6
+    },
+    {
+      "nombre": "Hugo Suarez L.",
+      "correo": "LADY@experis.com",
+      "pais": "ESP",
+      "genero": "M",
+      "cargo": "Scrum",
+      "empresa": "EXPERIS",
+      "rol": "USER",
+      "id": 7
+    },
+    {
+      "nombre": "Mariana Cuenca Ch.",
+      "correo": "LADY@experis.com",
+      "pais": "CHI",
+      "genero": "F",
+      "cargo": "PIO",
+      "empresa": "EXPERIS",
+      "rol": "GESTOR",
+      "id": 8
+    },
+    {
+      "nombre": "Merly Hernandez",
+      "correo": "DIEGO@mbl.com",
+      "pais": "CHI",
+      "genero": "F",
+      "cargo": "Diseño UI",
+      "empresa": "MBL",
+      "rol": "USER",
+      "id": 9
+    },
+    {
+      "nombre": "Naomi Suarez L.",
+      "correo": "LADY@experis.com",
+      "pais": "ESP",
+      "genero": "F",
+      "cargo": "Analista",
+      "empresa": "EXPERIS",
+      "rol": "USER",
+      "id": 10
+    },
+    {
+      "nombre": "Mariana Cuenca Ch.",
+      "correo": "LADY@experis.com",
+      "pais": "ESP",
+      "genero": "F",
+      "cargo": "PIO",
+      "empresa": "EXPERIS",
+      "rol": "USER",
+      "id": 11
+    },
+    {
+      "nombre": "Katerin Vise L",
+      "correo": "DANIEL@indracompany.com",
+      "pais": "MEX",
+      "genero": "F",
+      "cargo": "Diseñador UI",
+      "empresa": "INDRA",
+      "rol": "USER",
+      "id": 12
+    },
+    {
+      "nombre": "Byram Ruiz",
+      "correo": "MELISA@alicorp.com",
+      "pais": "ECU",
+      "genero": "M",
+      "cargo": "Scrum Master",
+      "empresa": "ALICORP",
+      "rol": "GESTOR",
+      "id": 13
+    },
+    {
+      "nombre": "karina Castillo",
+      "correo": "DANIEL@indracompanyl.com",
+      "pais": "PER",
+      "genero": "F",
+      "cargo": "Frontend",
+      "empresa": "INDRA",
+      "rol": "USER",
+      "id": 14
+    },
+    {
+      "nombre": "Pamela Estrada",
+      "correo": "MELISA@alicorp.com",
+      "pais": "ARG",
+      "genero": "F",
+      "cargo": "Scrum master",
+      "empresa": "ALICORP",
+      "rol": "USER",
+      "id": 15
+    },
+    {
+      "nombre": "Manuel Romero",
+      "correo": "Lady@experis.com",
+      "pais": "URU",
+      "genero": "M",
+      "cargo": "UX-UI",
+      "empresa": "EXPERIS",
+      "rol": "GESTOR",
+      "id": 16
+    }
+  ],
+  "CompanyList": [
+    {
+      "nombre": "Indra",
+      "emailRep": "DANIEL@indracompany.com",
+      "correo": "cesar12@gmail.com",
+      "ruc": "12345678987",
+      "nContacto": "920080132",
+      "id": 1
+    },
+    {
+      "nombre": "Centhos",
+      "emailRep": "KAREN@centhos.com",
+      "correo": "karen@gmail.com",
+      "ruc": "12311240002",
+      "nContacto": "920080144",
+      "id": 2
+    },
+    {
+      "nombre": "Ingenia",
+      "emailRep": "NILTON@Ingenia.com",
+      "correo": "johan_b3@gmail.com",
+      "ruc": "12343245000",
+      "nContacto": "920080154",
+      "id": 3
+    },
+    {
+      "nombre": "Alicorp",
+      "emailRep": "MELISA@alicorp.com",
+      "correo": "cinthia2021@indra.com",
+      "ruc": "12002043032",
+      "nContacto": "920080109",
+      "id": 4
+    },
+    {
+      "nombre": "Experis",
+      "emailRep": "LADY@experis.com",
+      "correo": "pablo@experis.com",
+      "ruc": "10200003218",
+      "nContacto": "920080102",
+      "id": 5
+    },
+    {
+      "nombre": "MBL",
+      "emailRep": "DIEGO@mbl.com",
+      "correo": "camilo_2022@gmail.com",
+      "ruc": "12344532113",
+      "nContacto": "9200801039",
+      "id": 6
+    }
+  ],
+  "listPases": [
+    {
+      "id": 1,
+      "date": "20-03-2022",
+      "enable": false
+    },
+    {
+      "id": 2,
+      "date": "20-03-2022",
+      "enable": false
+    },
+    {
+      "id": 3,
+      "date": "20-02-2022",
+      "enable": true
+    },
+    {
+      "id": 4,
+      "date": "4-03-2022",
+      "enable": false
+    },
+    {
+      "id": 5,
+      "date": "10-03-2022",
+      "enable": false
+    },
+    {
+      "id": 6,
+      "date": "25-03-2022",
+      "enable": false
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

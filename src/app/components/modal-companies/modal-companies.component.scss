@@ -1,0 +1,189 @@
+:host {
+  display: block;
+  position: relative;
+  padding: 0 20px;
+  // width: 500px;
+}
+.modal-title {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #00bec0;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.icon-btn {
+  padding: 2px;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 0 2px;
+  border-radius: 2px;
+  &:disabled {
+    background-color: #f4f4f3;
+    color: #fff;
+  }
+}
+
+.btn-trans {
+  background-color: transparent;
+  transition: ease 0.3s;
+  &:hover:enabled {
+    background-color: #00000014;
+  }
+  &:hover:enabled:active {
+    background-color: #00000044;
+  }
+}
+
+
+
+.c-orange {
+  color: #e66c64;
+}
+
+.moda-close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 20;
+}
+
+.cli-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cli-form-element {
+  margin-bottom: 0 !important;
+}
+
+.col-f-2 {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.cli-input-white {
+  border: solid 1px #b6b7b7;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 5px 10px;
+  transition: ease 0.3s;
+  &:hover:enabled {
+    border-color: #00bec0;
+  }
+  &:focus:enabled {
+    border-color: #00bec0;
+  }
+  &:disabled {
+    background-color: #f8f8f8;
+    color: #86888c;
+  }
+}
+
+
+.cli-input-group{
+
+  /* display: -webkit-box; */
+  display: -ms-flexbox;
+  display: flex;
+  /* -webkit-box-align: center; */
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  /* margin-bottom: 0; */
+  /* font-size: 1rem; */
+  /* font-weight: 400; */
+  /* line-height: 1.5; */
+  color: #34dc2f;
+}
+
+.cli-btn {
+  border: none;
+  border-radius: 2px;
+  margin: 0 5px;
+  height: 30px;
+  padding: 0 10px;
+  font-family: "Telefonica-Bold" !important;
+  display: flex;
+  align-items: center;
+  & mat-icon {
+    margin: 0 5px;
+  }
+  &:disabled {
+    background-color: #f4f4f3;
+    color: #fff;
+  }
+}
+
+.btn-grey {
+  background-color: #e9eae8;
+  transition: ease 0.3s;
+  &:hover:enabled {
+    background-color: #f4f4f3;
+  }
+  &:hover:enabled:active {
+    background-color: #d3d4d3;
+  }
+}
+
+.btn-blue {
+  background-color: #00bec0;
+  color: #fff;
+  transition: ease 0.3s;
+  &:hover:enabled {
+    background-color: #80b0ff;
+  }
+  &:hover:enabled:active {
+    background-color: #003180;
+  }
+}
+
+/* FOMR SYLES */
+.cli-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &-title {
+    width: 100%;
+    font-family: "Telefonica-Bold";
+    text-align: center;
+    font-size: 1.6rem;
+    //margin: auto;
+    margin-bottom: 10px;
+  }
+  &-titleback {
+    margin-right: 100px;
+    display: flex;
+  }
+
+  &-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  &-element {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    & label {
+      padding: 0;
+      margin: 0 2px;
+      font-size: 0.9rem;
+    }
+    &:focus-within label {
+      color: #00bec0;
+    }
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 5px;
+  }
+}

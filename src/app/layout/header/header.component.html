@@ -1,0 +1,43 @@
+<!-- <div class="cli-header"> -->
+<div class="cli-header">
+
+  <div class="logoheader">
+    <img
+      class="hlogo"
+      src="../../../assets/images/logos/tercerosLogoHeader.svg"
+    />
+    <div class="logo-let">
+      <div style="font-weight: bold">Emp. colaboradoras</div>
+    </div>
+  </div>
+
+
+    <div style="flex: 1 1 auto"></div>
+    <div class="personname">{{ fullName | uppercase }}</div>
+    <app-user-section
+      [nameini]="userAbbreviation"
+      class="user-bag"
+    ></app-user-section>
+    <mat-icon class="menu-icon-header"
+              [matMenuTriggerFor]="menu"
+      >keyboard_arrow_down
+    </mat-icon>
+
+    <mat-menu class="mat-menu-header" #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span class="userName">{{ fullName | uppercase }}</span>
+      </button>
+      <!-- <hr /> -->
+      <button mat-menu-item
+              (click)="logout()"
+              class="btn-header">
+        <mat-icon>close</mat-icon>
+        <span>Cerrar Sesión</span>
+      </button>
+    </mat-menu>
+
+
+</div>
+
+<!-- </div> -->
