@@ -2,47 +2,44 @@
   height: 100vh;
   width: 100%;
 }
-.error-message{
-	margin: auto;
-    max-width: 300px;
-    text-align: center;
+.error-message {
+  margin: auto;
+  max-width: 300px;
+  text-align: center;
 }
 
-.error-icon{
-	display: block;
-	margin: auto;
+.error-icon {
+  display: block;
+  margin: auto;
 }
 
-.cli-body{
+.cli-body {
   font-family: "Telefonica";
   height: 100%;
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
 }
-.cli-canvas{
+.cli-canvas {
   padding-top: 56px;
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-.cli-canvas-fixedaside{
-  /* padding-left: 235px; */
+.cli-canvas-fixedaside {
   padding-left: 235px;
 }
-.cli-canvas-hiddenaside{
+.cli-canvas-hiddenaside {
   padding-left: 70px;
 }
-.cli-content{
+.cli-content {
   padding: 20px;
   flex: 1 0 auto;
 }
 
 @media (max-width: 850px) {
-/*   .title-header {
+  /*   .title-header {
     font-size: 13px;
   } */
-
 }
-

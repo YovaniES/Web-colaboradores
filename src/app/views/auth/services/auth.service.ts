@@ -3,12 +3,6 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { AuthResponse, LoginForm } from '../interfaces/auth-interfaces';
 import { catchError, map, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
-
-//import * as jwt_decode from 'jwt-decode';
-
-
-
-//import * as jwt_decode from 'jwt-decode';
 import jwt_decode from 'jwt-decode';
 
 import { Router } from '@angular/router';
@@ -81,7 +75,9 @@ export class AuthService {
       }
 
       if (
-        decodedToken && decodedToken.exp && decodedToken.exp > Date.now() / 1000
+        decodedToken &&
+        decodedToken.exp &&
+        decodedToken.exp > Date.now() / 1000
       ) {
         validSession = true;
       }
@@ -91,4 +87,3 @@ export class AuthService {
     }
   }
 }
-

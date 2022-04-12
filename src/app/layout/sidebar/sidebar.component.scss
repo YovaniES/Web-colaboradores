@@ -6,23 +6,23 @@
   font-size: 1.5rem;
   color: #00bec0;
 }
-.cli-aside{
+.cli-aside {
   position: fixed;
   top: 56px;
   bottom: 0;
   left: 0;
   z-index: 50;
-  background-color: #F2F4FF;
-  color: #132A34;
+  background-color: #f2f4ff;
+  color: #132a34;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 1px 0 #0000004d, 0 2px 5px 0 #00000036 ;
+  box-shadow: 0 1px 1px 0 #0000004d, 0 2px 5px 0 #00000036;
 }
 
-.aside-btn-float{
+.aside-btn-float {
   position: absolute;
   z-index: 60;
-  background-color: #fff ;
+  background-color: #fff;
   box-shadow: 0 1px 1px 0 #00000020, 0 2px 5px 0 #00000020;
   right: -14px;
   top: 13px;
@@ -35,31 +35,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition:  0.3s ease;
+  transition: 0.3s ease;
 }
-.aside-btn-float:hover{
+.aside-btn-float:hover {
   cursor: pointer;
-  background-color: #2B3447;
+  background-color: #2b3447;
 }
-.cli-aside-fixed{
+.cli-aside-fixed {
   width: 235px;
 }
-.cli-aside-hover{
+.cli-aside-hover {
   width: 70px;
 }
-.cli-aside-container{
-  flex:  1;
+.cli-aside-container {
+  flex: 1;
 }
 
-.cli-aside-overflow{
+.cli-aside-overflow {
   overflow: auto;
 }
-.cli-aside-menu{
+.cli-aside-menu {
   margin: 0;
   list-style: none;
   padding: 15px 0;
 }
-
 
 .menu-link:hover {
   text-decoration: none;
@@ -67,15 +66,15 @@
   color: #fff;
 }
 
-.active-link{
-  color: #FFF !important;
-  background-color: #B4DEE6;
+.active-link {
+  color: #fff !important;
+  background-color: #b4dee6;
   border-right: 4px #00bec0 solid;
 }
-.active-sublink{
-  background-color: #CCDFFF;
-  border-right: 6px #2B3447 solid;
-  color: #2B3447 !important;
+.active-sublink {
+  background-color: #ccdfff;
+  border-right: 6px #2b3447 solid;
+  color: #2b3447 !important;
 }
 
 .menu-link {
@@ -94,7 +93,7 @@
   border-bottom: 1px solid #b4dee6;
   border-top: 1px solid #b4dee6;
 }
-.btn-toggle-rotated{
+.btn-toggle-rotated {
   transform: rotate(180deg);
 }
 .menu-link:hover {
@@ -103,18 +102,16 @@
   color: #fff;
 }
 
-
-.menu-link-open{
-  background-color: #99C0FF;
+.menu-link-open {
+  background-color: #99c0ff;
   color: #fff;
 }
-.menu-icon{
+.menu-icon {
   flex: 0 0 35px;
   font-size: 1rem;
 }
 
-
-.menu-arrow{
+.menu-arrow {
   flex: 0 0 20px;
   display: flex;
   align-items: center;
@@ -122,10 +119,11 @@
   line-height: 0;
   transition: 0.3s ease;
 }
-.menu-arrow-open{
+.menu-arrow-open {
   transform: rotate(90deg);
 }
-.menu-link span, .submenu-link span{
+.menu-link span,
+.submenu-link span {
   font-weight: 400;
   font-size: 1.1rem;
   text-transform: none;
@@ -135,28 +133,28 @@
   padding: 0;
 }
 
-.sub-menu{
+.sub-menu {
   max-height: 0px;
   overflow: hidden;
-  background: #CCDFFF;
+  background: #ccdfff;
   flex-grow: 1;
   flex-direction: column;
   transition: 0.3s ease;
 }
-.sub-menu-displayed{
+.sub-menu-displayed {
   height: fit-content;
   max-height: 800px;
 }
 
-.sub-menu ul{
+.sub-menu ul {
   margin: 0;
   list-style: none;
   padding: 0;
 }
 
-.submenu-link{
+.submenu-link {
   padding: 4px 25px 4px 40px;
-  color: #0066FF;
+  color: #0066ff;
   cursor: pointer;
   min-height: 44px;
   display: flex;
@@ -167,23 +165,23 @@
   position: relative;
   transition: 0.3s ease;
 }
-.submenu-link:hover{
-  color:#132A34;
+.submenu-link:hover {
+  color: #132a34;
   text-decoration: none;
-  background-color: #99C0FF;
+  background-color: #99c0ff;
 }
 
-.aside-hover-menu{
+.aside-hover-menu {
   display: none;
   position: absolute;
   top: -50%;
-  left:70px;
+  left: 70px;
   background-color: #fff;
   box-shadow: 0 1px 1px 0 #00000020, 0 2px 5px 0 #00000050;
   z-index: 96;
 }
 
-.cli-menu-item{
+.cli-menu-item {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -191,11 +189,11 @@
   padding: 0;
   position: relative;
 }
-.cli-menu-item:hover .aside-hover-menu{
+.cli-menu-item:hover .aside-hover-menu {
   display: block;
 }
 
-.submenu-link{
+.submenu-link {
   //padding: 0 2px 1px 15px;
   color: #5ac1d6;
   cursor: pointer;
@@ -207,29 +205,25 @@
   transition: 0.3s ease;
 }
 
-.submenu-link:hover{
-  color: #2B3447;
+.submenu-link:hover {
+  color: #2b3447;
   text-decoration: none;
   background-color: #b4dee6;
 }
 
-.submenu-icon{
+.submenu-icon {
   text-align: left;
   flex: 0 0 35px;
 }
 
-
 @media (max-width: 850px) {
- .submenu-link{
+  .submenu-link {
     color: #5ac1d6;
     cursor: pointer;
     min-height: 30px;
   }
 
-/*   .cli-aside{
+  /*   .cli-aside{
     display: none;
 } */
-
 }
-
-

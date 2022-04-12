@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UsersQrComponent } from './users-qr/users-qr.component';
+import { UsersQrComponent } from '../../public/validate-qr/users-qr/users-qr.component';
 
 const routes: Routes = [
   { path:'user', component:UsersQrComponent },
