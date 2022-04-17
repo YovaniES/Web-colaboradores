@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+
   public myLoginForm: FormGroup = this.fb.group({
      username: [ localStorage.getItem('username') || 'gherson.perez@telefonica.com', [Validators.required, Validators.email]],
      password: ['hola', [Validators.required, Validators.minLength(4)]],

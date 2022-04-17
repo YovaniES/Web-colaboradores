@@ -245,5 +245,28 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+
+  "menuList": [
+    {
+      "code": "ADM",
+      "name": "ADMINIST",
+      "menus": [{ "id": 1, "code": "Adm2", "name": "abc" }]
+    },
+    {
+      "code": "CON",
+      "name": "CONFIGURACIÓN",
+      "menus": [{ "id": 2, "code": "Conf2", "name": "xyz" }]
+    },
+    {
+      "code": "HER",
+      "name": "HERRAMIENTAS",
+      "menus": [{ "id": 3, "code": "usu", "name": "usuarios nuevos" }]
+    },
+    {
+      "code": "TAL",
+      "name": "TALENTO",
+      "menus": [{ "id": 4, "code": "DAS", "name": "Dashboard" }]
+    }
+  ]
 }

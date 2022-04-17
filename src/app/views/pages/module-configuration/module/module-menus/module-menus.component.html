@@ -1,0 +1,90 @@
+<ng-container *ngIf="!loading">
+  <div class="cli-col" *ngFor="let module of listmodules; let idx = index">
+    <!-- MODULO -->
+    <div class="moad-module">
+      <div class="moad-module-title">
+        <button (click)="showingidx = idx" class="icon-btn btn-s btn-blue">
+          <mat-icon class="icon-20">{{
+            showingidx == idx ? "keyboard_arrow_down" : "keyboard_arrow_right"
+          }}</mat-icon>
+        </button>
+        <mat-icon
+          [ngClass]="{ 'c-green': module.enable, 'c-light': !module.enable }"
+          class="icon-18"
+          >{{ module.icon }}</mat-icon
+        >
+        <div class="">{{ module.code }}:</div>
+        <div style="margin: 0 10px">{{ module.text }}</div>
+        [{{ module.order }}]
+        <div *ngIf="!module.enable" class="moad-inactive">inactivo</div>
+      </div>
+      <div class="moad-actions">
+        <button
+          matTooltip="Editar módulo"
+          (click)="openEditDialog(idx, module, true, false, module.text)"
+          class="icon-btn btn-trans c-yellow"
+        >
+          <mat-icon class="icon-18">edit</mat-icon>
+        </button>
+        <button
+          matTooltip="Agregar menú"
+          (click)="openEditDialog(idx, module, false, true, module.text)"
+          class="icon-btn btn-trans c-green"
+        >
+          <mat-icon class="icon-18">add</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- MENUS -->
+    <div *ngIf="showingidx == idx" class="moad-menus">
+      <div *ngFor="let mm of module.submenus" class="moad-menu">
+        <div class="moad-module-title">
+          <mat-icon
+            [ngClass]="{ 'c-green': mm.enable, 'c-light': !mm.enable }"
+            class="icon-18"
+            >{{ mm.icon }}</mat-icon
+          >
+          <div class="bold">{{ mm.code }}:</div>
+          <div style="margin: 0 10px">{{ mm.text }}</div>
+          [{{ mm.order }}]
+          <div *ngIf="!mm.enable" class="moad-inactive">inactivo</div>
+        </div>
+        <div class="moad-actions">
+          <button
+            (click)="openEditDialog(idx, mm, false, false, module.text)"
+            class="icon-btn btn-trans c-yellow"
+          >
+            <mat-icon class="icon-18">edit</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="moad-menu"
+           *ngIf="module.submenus.length == 0">
+        Aún no agrega menús a este módulo
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex">
+    <div class="linkicons flex-1">
+      <a
+        href="https://fonts.google.com/icons?selected=Material+Icons"
+        target="_blank"
+        >Ver lista de íconos</a
+      >
+    </div>
+    <!-- NUEVO MÓDULO -->
+    <button style="margin-top: 10px"
+            class="cli-btn btn-turq">
+      Nuevo Módulo
+    </button>
+  </div>
+</ng-container>
+
+<div class="cli-loader" *ngIf="loading">
+  <mat-spinner diameter="60"></mat-spinner>
+</div>
+
+<!-- OJO FALTAN AGREGAR -->
+<!-- (click)="openEditDialog(0, null, true, true, null)" -->

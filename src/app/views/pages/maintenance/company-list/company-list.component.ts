@@ -1,24 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ModalUsersComponent } from 'src/app/components/modal-users/modal-users.component';
-import { ModalUserService } from 'src/app/services/modal-user.service';
+import { ModalCompaniesComponent } from 'src/app/views/pages/maintenance/company-list/modal-companies/modal-companies.component';
+import { ModalCompanyService } from 'src/app/services/modal-company.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-usuarios-list',
-  templateUrl: './usuarios-list.component.html',
-  styleUrls: ['./usuarios-list.component.scss'],
+  selector: 'app-company-list',
+  templateUrl: './company-list.component.html',
+  styleUrls: ['./company-list.component.scss'],
 })
-export class UsuariosListComponent implements OnInit {
-  companyValue = new FormControl();
-
-  rolUser: string = '';
-
-  totalUsuarios: number = 0;
+export class CompanyListComponent implements OnInit {
+  totalEmp: number = 0;
   loading: boolean = false;
   fixedAside: boolean = false;
   loadingItem = false;
@@ -31,12 +26,10 @@ export class UsuariosListComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
     'nombre',
+    'emailRep',
     'correo',
-    'genero',
-    'pais',
-    'cargo',
-    'empresa',
-    'rol',
+    'ruc',
+    'nContacto',
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
@@ -46,24 +39,21 @@ export class UsuariosListComponent implements OnInit {
 
   constructor(
     private dialog: MatDialog,
-    private modalServices: ModalUserService
+    private modalServices: ModalCompanyService
   ) {}
 
   ngOnInit(): void {
-    this.cargarUsuarios();
-    this.companyValue.valueChanges.subscribe((company) => {
-      console.log('Usuarios', company);
-
-      this.dataSource.filter = company.trim().toLowerCase();
-    });
+    this.getCompany();
   }
 
-  createUser() {
-    const dialogRef = this.dialog.open(ModalUsersComponent, { width: '525px' });
+  createCompany() {
+    const dialogRef = this.dialog.open(ModalCompaniesComponent, {
+      width: '525px',
+    });
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.cargarUsuarios();
+        this.getCompany();
       }
       console.log(`Dialog result: ${result}`);
     });
@@ -73,41 +63,41 @@ export class UsuariosListComponent implements OnInit {
     this.fixedAside = e;
   }
 
-  cargarUsuarios() {
-    this.modalServices.obtenerUsuario().subscribe({
+  getCompany() {
+    this.modalServices.getCompany().subscribe({
       next: (res) => {
-        console.log('USERS', res);
+        console.log('COMPANY', res);
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        this.totalUsuarios = res.length;
+        this.totalEmp = res.length;
       },
       error: (err) => {
-        Swal.fire('Error', 'No se pudo cargar los Usuarios', 'warning');
+        Swal.fire('Error', 'No se pudo cargar la lista de Empresas', 'warning');
       },
     });
   }
 
-  editUsers(row: any) {
+  editCompany(row: any) {
     console.log(row);
     this.dialog
-      .open(ModalUsersComponent, {
+      .open(ModalCompaniesComponent, {
         width: '525px',
         data: row,
       })
       .afterClosed()
       .subscribe((val) => {
         if (val == 'update') {
-          this.cargarUsuarios();
+          this.getCompany();
         }
       });
   }
 
-  deleteUsers(id: number) {
+  deleteCompany(id: number) {
     Swal.fire({
-      title: '¿Borrar usuario?',
-      text: `¿Estas seguro que deseas eliminar el Usuario?`,
-      icon: 'question',
+      title: '¿Estas seguro que deseas eliminar la Empresa?',
+      text: 'Ya no podrás revetir estos cambios',
+      icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
@@ -116,13 +106,14 @@ export class UsuariosListComponent implements OnInit {
       if (result.value) {
         console.log('Eliminandooo', result);
 
-        this.modalServices.deleteUsers(id).subscribe((resp) => {
-          this.cargarUsuarios();
-          Swal.fire({
-            title: 'Usuario eliminado',
-            text: 'El usuario se eliminó con exito',
-            icon: 'success',
-          });
+        Swal.fire({
+          icon: 'success',
+          title: 'Exito',
+          text: 'La Empresa se eliminó con exito',
+        });
+
+        this.modalServices.deleteCompany(id).subscribe((resp) => {
+          this.getCompany();
         });
       }
     });
@@ -130,14 +121,10 @@ export class UsuariosListComponent implements OnInit {
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    console.log('AAAA', filterValue);
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
   }
-
-  doPageChange(type:number){}
-
 }

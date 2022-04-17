@@ -18,12 +18,12 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AuthModule,
     BlockUIModule.forRoot(),
-    LayoutModule,
     BrowserAnimationsModule,
 
-    MaterialModule
+    MaterialModule,
+    AuthModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

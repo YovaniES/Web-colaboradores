@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { AuthResponse, LoginForm } from '../interfaces/auth-interfaces';
 import { catchError, map, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import jwt_decode from 'jwt-decode';
 
 import { Router } from '@angular/router';
+import { AuthResponse, Users } from 'src/app/interfaces/auth.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   toggleUserPanel$ = new EventEmitter<boolean>();
 
-  private _usuario!: LoginForm;
+  private _usuario!: Users;
 
   constructor(private http: HttpClient, private router: Router) {}
 

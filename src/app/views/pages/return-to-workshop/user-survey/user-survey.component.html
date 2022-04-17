@@ -56,20 +56,14 @@
                   <button
                     class="cli-btn btn-enc btn-magenta"
                     (click)="changeAnswerValue(i, true)"
-                    [ngClass]="{
-                      'enabled-button': encuesta.responseValue == 'S'
-                    }"
-                  >
-                    Si
+                    [ngClass]="{'enabled-button': encuesta.responseValue == 'S'}"
+                  > Si
                   </button>
                   <button
                     class="cli-btn btn-enc btn-magenta"
                     (click)="changeAnswerValue(i, false)"
-                    [ngClass]="{
-                      'enabled-button': encuesta.responseValue == 'N'
-                    }"
-                  >
-                    No
+                    [ngClass]="{'enabled-button': encuesta.responseValue == 'N'}"
+                  > No
                   </button>
                 </div>
               </td>

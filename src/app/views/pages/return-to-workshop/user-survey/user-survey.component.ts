@@ -19,7 +19,7 @@ export class UserSurveyComponent implements OnInit {
   public myAngularxQrCode: string = '';
   cargando: boolean = true;
   usuario: any = {
-    acepta: '',
+  acepta: '',
   };
   encuestaList: Encuesta[] = [];
   validForm: boolean = false;
@@ -48,15 +48,14 @@ export class UserSurveyComponent implements OnInit {
     this.encuestaList[index].enable = enable;
     this.encuestaList[index].responseValue = enable ? 'S' : 'N';
 
-    this.validForm =
-      this.encuestaList.filter((item) => item.responseValue).length ==
-      this.encuestaList.length;
+    this.validForm = this.encuestaList
+        .filter((item) => item.responseValue).length == this.encuestaList.length;
   }
 
   guardar() {
     const request = this.encuestaList.map((item) => {
       return {
-        id: item.id,
+        id    : item.id,
         nombre: item.label,
         enable: item.enable,
       };
@@ -66,7 +65,6 @@ export class UserSurveyComponent implements OnInit {
       if (res) {
         const isInvalid = this.encuestaList.find((item) => item.enable);
         console.log(isInvalid);
-
         Swal.fire(
           'Encuesta completada!',
           'Su pase es exitoso..Felicidades',
@@ -75,7 +73,6 @@ export class UserSurveyComponent implements OnInit {
 
         if (isInvalid) {
           Swal.fire('Error', 'Faltan requisitos por completar', 'error');
-
           this.router.navigateByUrl('/public/qr');
         } else {
           this.router.navigateByUrl('dashboard/pases');

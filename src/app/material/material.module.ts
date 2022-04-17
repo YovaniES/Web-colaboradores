@@ -14,6 +14,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import {MatProgressBarModule} from '@angular/material/progress-bar';
@@ -37,10 +41,12 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatInputModule,
     MatCardModule,
     MatCheckboxModule,
-
     MatProgressBarModule,
     MatProgressSpinnerModule,
-
+    MatSelectModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatSnackBarModule,
   ],
 })
 export class MaterialModule { }
