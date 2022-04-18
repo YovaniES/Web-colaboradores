@@ -3,7 +3,8 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
 
   imports: [
    CoreModule,

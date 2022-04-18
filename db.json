@@ -1,7 +1,7 @@
 {
   "UsuariosList": [
     {
-      "nombre": "Diana Cordova",
+      "nombre": "Diana Blanco Cordova",
       "correo": "LADY@experis.com",
       "pais": "URU",
       "genero": "F",
@@ -246,34 +246,153 @@
   "profile": {
     "name": "typicode"
   },
-
   "menuList": [
     {
-      "icon": "engineering",
       "code": "ADM",
-      "text": "ADMINIST",
-      "menus": [{ "id": 1, "icon": "person", "code": "Adm2", "text": "abc" }]
-    },
-    {
-      "icon": "engineering",
-      "code": "CON",
-      "text": "CONFIGURACIÓN",
-      "menus": [{ "id": 2, "icon": "person", "code": "Conf2", "text": "xyz" }]
-    },
-    {
-      "icon": "engineering",
-      "code": "HER",
-      "text": "HERRAMIENTAS",
-      "menus": [
-        { "id": 3, "icon": "person", "code": "usu", "text": "usuarios nuevos" }
+      "text": "ADMINISTRACIÓN",
+      "order": 1,
+      "icon": "admin_panel_settings",
+      "type": "leo",
+      "link": "terceros",
+      "enable": true,
+      "module": "administrador",
+      "displayed": true,
+      "submenus": [
+        {
+          "id": 1,
+          "icon": "person",
+          "code": "ADM",
+          "text": "Usuarios"
+        },
+        {
+          "id": 2,
+          "icon": "https",
+          "code": "ADM",
+          "text": "Permisos"
+        },
+        {
+          "id": 3,
+          "icon": "menu_open",
+          "code": "ADM",
+          "text": "Módulos de config."
+        },
+        {
+          "id": 4,
+          "icon": "check",
+          "code": "ADM",
+          "text": "Menú"
+        }
       ]
     },
     {
-      "icon": "person",
-      "code": "TAL",
-      "text": "TALENTO",
-      "menus": [
-        { "id": 4, "icon": "person", "code": "DAS", "text": "Dashboard" }
+      "code": "FOR",
+      "text": "FORMACIÓN",
+      "order": 1,
+      "icon": "engineering",
+      "type": "leo",
+      "link": "terceros",
+      "enable": true,
+      "module": "administrador",
+      "displayed": true,
+      "submenus": [
+        {
+          "id": 1,
+          "icon": "person",
+          "code": "ADM",
+          "text": "Usuarios"
+        },
+        {
+          "id": 2,
+          "icon": "people",
+          "code": "ADM",
+          "text": "Permisos"
+        },
+        {
+          "id": 3,
+          "icon": "engineering",
+          "code": "ADM",
+          "text": "Módulos de config."
+        },
+        {
+          "id": 4,
+          "icon": "person",
+          "code": "ADM",
+          "text": "Menú"
+        }
+      ]
+    },
+    {
+      "code": "ORG",
+      "text": "ORGANIZACIÓN",
+      "order": 1,
+      "icon": "admin_panel_settings",
+      "type": "leo",
+      "link": "terceros",
+      "enable": true,
+      "module": "administrador",
+      "displayed": true,
+      "submenus": [
+        {
+          "id": 1,
+          "icon": "person",
+          "code": "ADM",
+          "text": "Usuarios"
+        },
+        {
+          "id": 2,
+          "icon": "people",
+          "code": "ADM",
+          "text": "Permisos"
+        },
+        {
+          "id": 3,
+          "icon": "engineering",
+          "code": "ADM",
+          "text": "Módulos de config."
+        },
+        {
+          "id": 4,
+          "icon": "person",
+          "code": "ADM",
+          "text": "Menú"
+        }
+      ]
+    },
+    {
+      "code": "HER",
+      "text": "HERRAMIENTAS",
+      "order": 1,
+      "icon": "build",
+      "type": "cam",
+      "link": "terceros",
+      "enable": true,
+      "module": "administrador",
+      "displayed": true,
+      "submenus": [
+        {
+          "id": 1,
+          "icon": "person",
+          "code": "ADM",
+          "text": "Usuarios"
+        },
+        {
+          "id": 2,
+          "icon": "people",
+          "code": "ADM",
+          "text": "Permisos"
+        },
+        {
+          "id": 3,
+          "icon": "engineering",
+          "code": "ADM",
+          "text": "Módulos de config."
+        },
+        {
+          "id": 4,
+          "icon": "person",
+          "code": "ADM",
+          "text": "Menú"
+        }
       ]
     }
   ]

@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         console.log('VALOR :',ok)
         if ( ok === true ) {
 
-          this.router.navigateByUrl('/dashboard');
+          this.router.navigateByUrl('/home');
         } else{
           Swal.fire('Error', 'Credenciales Erroneas', 'error');
 

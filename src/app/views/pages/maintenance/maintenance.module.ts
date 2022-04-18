@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { MaintenanceRoutingModule } from './maintenance-routing.module';
 import { CompanyListComponent } from './company-list/company-list.component';
@@ -8,7 +7,6 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { ModalCompaniesComponent } from './company-list/modal-companies/modal-companies.component';
 import { ModalUsersComponent } from './usuarios-list/modal-users/modal-users.component';
 import { CoreModule } from 'src/app/core/core.module';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +16,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ModalCompaniesComponent,
   ],
   imports: [
-    CommonModule,
     MaintenanceRoutingModule,
     MaterialModule,
-    //CoreModule,
+    CoreModule,
 
-    ReactiveFormsModule
   ],
 
   entryComponents: [ModalUsersComponent, ModalCompaniesComponent],

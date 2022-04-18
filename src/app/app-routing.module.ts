@@ -16,12 +16,6 @@ const routes: Routes = [
       import('./views/auth/auth.module').then((m) => m.AuthModule),
     canActivate: [NoAuthGuard],
   },
-  /* {
-    path: 'dashboard',
-    loadChildren: () => import('./layout/layout.module').then((m) => m.LayoutModule),
-    canActivate: [ValidarTokenGuard],
-  }, */
-
   {
     path: '',
     component: BaseComponent,
@@ -32,12 +26,19 @@ const routes: Routes = [
       { path:'mantenimiento',
         loadChildren: () => import('./views/pages/maintenance/maintenance.module').then(m => m.MaintenanceModule)
       },
+      { path: 'home',
+        loadChildren: () => import('./views/pages/home/home.module').then(m => m.HomeModule),
+        canActivate: [ValidarTokenGuard],
+
+      }
+      ,
       { path: 'administracion',
         loadChildren: () => import('./views/pages/module-configuration/module-configuration.module').then(m => m.ModuleConfigurationModule)
       }
     ],
   },
-  { path: '**', pathMatch: 'full', redirectTo: '/dashboard' },
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '**', pathMatch: 'full', redirectTo: '/home' },
 ];
 
 @NgModule({

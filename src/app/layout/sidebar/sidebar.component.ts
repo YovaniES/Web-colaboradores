@@ -22,14 +22,14 @@ export class SidebarComponent implements OnInit {
       displayed: false,
       subMenuList: [
         {
-          icon: 'engineering',
+          icon: 'menu_open',
           name: 'Config. Módulos',
           link: 'administracion/modulos',
           info: 'Config. de Módulos',
           displayed: false,
         },
         {
-          icon: 'search',
+          icon: 'https',
           name: 'Permisos',
           link: 'administracion/permisos',
           info: 'Permisos al Usuario',
@@ -54,8 +54,8 @@ export class SidebarComponent implements OnInit {
         {
           icon: 'people',
           link: 'mantenimiento/usuarios',
-          name: 'Colaboradores',
-          info: 'Lista de colaboradores',
+          name: 'Usuarios',
+          info: 'Lista de usuarios',
           displayed: false,
         },
       ],

@@ -7,18 +7,12 @@
   </mat-icon>
 </div>
 
-<!-- <button
-  (click)="dialogRef.close()"
-  class="icon-btn btn-trans c-orange moda-close-btn"
->
-  <mat-icon>close</mat-icon>
-</button> -->
-
 <div class="cli-form">
   <div class="cli-form-title c-male" style="margin-bottom: 10px">
     {{ data.isnew ? "Nuevo" : "Editar" }}
     {{ data.ismodule ? "Módulo" : "Menú" }}
   </div>
+
   <div *ngIf="!data.ismodule" class="cli-form-subtitle">
     Módulo {{ data.modulename }} ({{ modecode }})
   </div>
@@ -45,6 +39,7 @@
       />
     </div>
   </div>
+
   <div class="cli-row">
     <div *ngIf="!data.ismodule" class="cli-form-element col-f-1">
       <label>Path</label>

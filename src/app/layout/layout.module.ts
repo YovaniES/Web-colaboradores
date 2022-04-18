@@ -6,7 +6,6 @@ import { FooterComponent } from './footer/footer.component';
 import { UserSectionComponent } from './header/user-section/user-section.component';
 import { PagesModule } from '../views/pages/pages.module';
 import { MaterialModule } from '../material/material.module';
-import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BlockUIModule } from 'ng-block-ui';
@@ -18,7 +17,6 @@ import { CoreModule } from '../core/core.module';
     HeaderComponent,
     UserSectionComponent,
     SidebarComponent,
-    MainComponent,
     FooterComponent,
   ],
 
@@ -27,7 +25,6 @@ import { CoreModule } from '../core/core.module';
     HeaderComponent,
     UserSectionComponent,
     SidebarComponent,
-    MainComponent,
     FooterComponent,
   ],
 

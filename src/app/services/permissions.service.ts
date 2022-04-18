@@ -12,8 +12,6 @@ export class PermissionsService {
   constructor(private http:HttpClient) { }
 
 
-
-
   getModules():Observable<any>{
    return this.http.get(API_GET_MODULES)
   }
