@@ -2,14 +2,24 @@
   <div class="cli-card-body">
     <div class="cli-title-center c-male">Configuración de módulos</div>
     <div class="modules-actions">
-      <!-- <button
+      <button
         (click)="showing = 1"
         [ngClass]="{ 'btn-turq': showing == 1, 'btn-trans': showing != 1 }"
         class="cli-btn"
       > Menús
-      </button> -->
-      <!-- <button (click)="showing=2" [ngClass]="{'btn-blue':showing==2,'btn-trans':showing!=2} "  class="cli-btn">Segmentos</button>
-          <button (click)="showing=3" [ngClass]="{'btn-blue':showing==3,'btn-trans':showing!=3} "  class="cli-btn">Funcionalidades</button> -->
+      </button>
+      <button
+        (click)="showing = 2"
+        [ngClass]="{ 'btn-blue': showing == 2, 'btn-trans': showing != 2 }"
+        class="cli-btn"
+      > Segmentos
+      </button>
+      <button
+        (click)="showing = 3"
+        [ngClass]="{ 'btn-blue': showing == 3, 'btn-trans': showing != 3 }"
+        class="cli-btn"
+      > Funcionalidades
+      </button>
     </div>
 
     <app-module-menus *ngIf="showing == 1"></app-module-menus>

@@ -18,6 +18,8 @@
         [{{ module.order }}]
         <div *ngIf="!module.enable" class="moad-inactive">inactivo</div>
       </div>
+
+      <!-- BUTTONS EDIT - ADD -->
       <div class="moad-actions">
         <button
           matTooltip="Editar módulo"
@@ -59,8 +61,7 @@
           </button>
         </div>
       </div>
-      <div class="moad-menu"
-           *ngIf="module.submenus.length == 0">
+      <div class="moad-menu" *ngIf="module.submenus.length == 0">
         Aún no agrega menús a este módulo
       </div>
     </div>
@@ -75,15 +76,17 @@
       >
     </div>
     <!-- NUEVO MÓDULO -->
-    <button style="margin-top: 10px"
-            class="cli-btn btn-turq">
+    <button
+      style="margin-top: 10px"
+      class="cli-btn btn-turq"
+    >
       Nuevo Módulo
     </button>
   </div>
 </ng-container>
 
 <div class="cli-loader" *ngIf="loading">
-  <mat-spinner diameter="60"></mat-spinner>
+  <mat-spinner diameter="40"></mat-spinner>
 </div>
 
 <!-- OJO FALTAN AGREGAR -->

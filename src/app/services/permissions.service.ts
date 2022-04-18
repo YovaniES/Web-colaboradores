@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { API_GET_MODULES, API_MENU, API_MODULE } from '../core/constants/url.constants';
+import { API_GET_MODULES, API_MENU, API_MODULES } from '../core/constants/url.constants';
 import { Menu } from '../core/models/menu.models';
 
 @Injectable({
@@ -14,16 +14,20 @@ export class PermissionsService {
 
 
 
-  httpGetModules():Observable<any>{
+  getModules():Observable<any>{
    return this.http.get(API_GET_MODULES)
   }
 
 
-  httpPostModule$(data: Menu): Observable<Object> {
-    return this.http.post(API_MODULE, data);
+  postModule$(data: Menu): Observable<Object> {
+    return this.http.post(API_MODULES, data);
   }
 
-  httpPostMenu$(data: Menu): Observable<Object> {
+  postMenu$(data: Menu): Observable<Object> {
     return this.http.post(API_MENU, data);
+  }
+
+  getAllModules(){
+    return this.http.get(API_MODULES)
   }
 }

@@ -249,24 +249,32 @@
 
   "menuList": [
     {
+      "icon": "engineering",
       "code": "ADM",
-      "name": "ADMINIST",
-      "menus": [{ "id": 1, "code": "Adm2", "name": "abc" }]
+      "text": "ADMINIST",
+      "menus": [{ "id": 1, "icon": "person", "code": "Adm2", "text": "abc" }]
     },
     {
+      "icon": "engineering",
       "code": "CON",
-      "name": "CONFIGURACIÓN",
-      "menus": [{ "id": 2, "code": "Conf2", "name": "xyz" }]
+      "text": "CONFIGURACIÓN",
+      "menus": [{ "id": 2, "icon": "person", "code": "Conf2", "text": "xyz" }]
     },
     {
+      "icon": "engineering",
       "code": "HER",
-      "name": "HERRAMIENTAS",
-      "menus": [{ "id": 3, "code": "usu", "name": "usuarios nuevos" }]
+      "text": "HERRAMIENTAS",
+      "menus": [
+        { "id": 3, "icon": "person", "code": "usu", "text": "usuarios nuevos" }
+      ]
     },
     {
+      "icon": "person",
       "code": "TAL",
-      "name": "TALENTO",
-      "menus": [{ "id": 4, "code": "DAS", "name": "Dashboard" }]
+      "text": "TALENTO",
+      "menus": [
+        { "id": 4, "icon": "person", "code": "DAS", "text": "Dashboard" }
+      ]
     }
   ]
 }

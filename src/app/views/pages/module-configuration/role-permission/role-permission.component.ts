@@ -117,7 +117,7 @@ export class RolePermissionComponent implements OnInit {
   doGetModules() {
     this.loadingModules = true;
     const subs: Subscription = this.permissionsService
-      .httpGetModules()
+      .getModules()
       .subscribe((r: moduleDetails[]) => {
         this.moduleList = r;
         this.loadingModules = false;

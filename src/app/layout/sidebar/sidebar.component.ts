@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
   menuList = [
     {
       icon: 'folder_special',
-      link: 'nmj',
+      link: 'administracion',
       name: 'Administración',
       info: 'Administración de usuarios',
       displayed: false,
@@ -24,14 +24,14 @@ export class SidebarComponent implements OnInit {
         {
           icon: 'engineering',
           name: 'Config. Módulos',
-          link: 'modulos',
+          link: 'administracion/modulos',
           info: 'Config. de Módulos',
           displayed: false,
         },
         {
           icon: 'search',
           name: 'Permisos',
-          link: 'permisos',
+          link: 'administracion/permisos',
           info: 'Permisos al Usuario',
           displayed: false,
         },
@@ -46,23 +46,16 @@ export class SidebarComponent implements OnInit {
       subMenuList: [
         {
           icon: 'business',
-          link: 'company',
+          link: 'mantenimiento/company',
           name: 'Empresa',
           info: 'Lista empresas',
           displayed: false,
         },
         {
           icon: 'people',
-          link: 'usuarios',
+          link: 'mantenimiento/usuarios',
           name: 'Colaboradores',
           info: 'Lista de colaboradores',
-          displayed: false,
-        },
-        {
-          icon: 'search',
-          link: 'abd',
-          name: 'Todo',
-          info: 'Coóigos guardados',
           displayed: false,
         },
       ],
@@ -76,20 +69,14 @@ export class SidebarComponent implements OnInit {
       subMenuList: [
         {
           icon: 'groups',
-          link: 'encuesta',
+          link: 'terceros/encuesta',
           name: 'Pase de reunión',
           info: 'Confirmación de encuestas',
           displayed: false,
         },
-        /* {
-          icon: 'person',
-          link: 'encuesta',
-          name: 'Encuesta de colaboradores',
-          info: 'Confirmación de encuestas',
-        }, */
         {
           icon: 'checklist_rtl',
-          link: 'pases',
+          link: 'terceros/pases',
           name: 'Lista de pases',
           info: 'Pase de colaboradores',
           displayed: false,

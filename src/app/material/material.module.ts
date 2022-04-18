@@ -22,6 +22,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [],
@@ -47,6 +48,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatTabsModule,
     MatRadioModule,
     MatSnackBarModule,
+    MatMenuModule,
+
   ],
 })
 export class MaterialModule { }

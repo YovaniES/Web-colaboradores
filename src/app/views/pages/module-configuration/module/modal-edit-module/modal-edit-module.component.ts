@@ -53,7 +53,7 @@ export class ModalEditModuleComponent implements OnInit {
     if (this.data.ismodule) {
       this.menu.module = this.data.isnew ? 'ADD' : 'EDT';
       const sub: Subscription = this.permissionService
-        .httpPostModule$(this.menu)
+        .postModule$(this.menu)
         .subscribe((resp: any) => {
           this.blockUI.stop();
           if (resp.status) this.dialogRef.close(this.menu);
@@ -65,7 +65,7 @@ export class ModalEditModuleComponent implements OnInit {
     } else {
       this.menu.module = this.modecode;
       const sub: Subscription = this.permissionService
-        .httpPostMenu$(this.menu)
+        .postMenu$(this.menu)
         .subscribe((resp: any) => {
           this.blockUI.stop();
           if (resp.status) this.dialogRef.close(this.menu);

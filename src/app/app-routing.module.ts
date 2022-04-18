@@ -16,11 +16,11 @@ const routes: Routes = [
       import('./views/auth/auth.module').then((m) => m.AuthModule),
     canActivate: [NoAuthGuard],
   },
-  {
+  /* {
     path: 'dashboard',
     loadChildren: () => import('./layout/layout.module').then((m) => m.LayoutModule),
     canActivate: [ValidarTokenGuard],
-  },
+  }, */
 
   {
     path: '',
@@ -32,7 +32,7 @@ const routes: Routes = [
       { path:'mantenimiento',
         loadChildren: () => import('./views/pages/maintenance/maintenance.module').then(m => m.MaintenanceModule)
       },
-      { path: 'config-modulo',
+      { path: 'administracion',
         loadChildren: () => import('./views/pages/module-configuration/module-configuration.module').then(m => m.ModuleConfigurationModule)
       }
     ],
