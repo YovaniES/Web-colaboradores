@@ -11,6 +11,9 @@ export class PermissionsService {
 
   constructor(private http:HttpClient) { }
 
+  getMenu():Observable<any>{
+    return this.http.get(API_MENU)
+  }
 
   getModules():Observable<any>{
    return this.http.get(API_GET_MODULES)
@@ -21,7 +24,7 @@ export class PermissionsService {
     return this.http.post(API_MODULES, data);
   }
 
-  postMenu$(data: Menu): Observable<Object> {
+  postMenu(data: Menu): Observable<Object> {
     return this.http.post(API_MENU, data);
   }
 

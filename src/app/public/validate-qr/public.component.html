@@ -11,15 +11,14 @@
     </div>
 
     <div style="flex: 1 1 auto"></div>
-    <button class="cli-btn btn-fucsia"
-            routerLink="/login">
-            Login
-    </button>
+    <button class="cli-btn btn-fucsia" routerLink="/login">Login</button>
   </div>
 
   <div class="cli-canvas">
     <div class="cli-content">
-      <router-outlet></router-outlet>
+      <block-ui>
+        <router-outlet></router-outlet>
+      </block-ui>
     </div>
     <app-footer></app-footer>
   </div>

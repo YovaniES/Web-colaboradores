@@ -1,14 +1,13 @@
 <div class="cli-modalclose">
-  <mat-icon
-    class="icon-20"
-    matTooltip="Cerrar"
-    (click)="dialogRef.close()"
+  <mat-icon class="icon-20"
+            matTooltip="Cerrar"
+            (click)="dialogRef.close()"
     >close
   </mat-icon>
 </div>
 
 <div class="cli-form">
-  <div class="cli-form-title c-male" style="margin-bottom: 10px">
+  <div class="cli-form-title c-male" style="margin-bottom: 20px">
     {{ data.isnew ? "Nuevo" : "Editar" }}
     {{ data.ismodule ? "Módulo" : "Menú" }}
   </div>
@@ -30,6 +29,7 @@
         class="cli-input"
       />
     </div>
+
     <div class="cli-form-element col-f-fill">
       <label>Nombre</label>
       <input
@@ -81,10 +81,14 @@
     </div>
   </div>
   <div class="cli-form-buttons">
-    <button (click)="dialogRef.close()" class="cli-btn btn-grey">
+    <button (click)="dialogRef.close()"
+            class="cli-btn btn-grey">
       cancelar
     </button>
     <div class="flex-1"></div>
-    <button (click)="save()" class="cli-btn btn-blue">Guardar</button>
+    <button (click)="save()"
+            class="cli-btn btn-blue">
+            Guardar
+    </button>
   </div>
 </div>

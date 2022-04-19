@@ -1,4 +1,18 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { PermissionsService } from 'src/app/services/permissions.service';
+
+export interface Menu {
+  code: string;
+  text: string;
+  order: number;
+  icon: string;
+  type: string;
+  link: string;
+  submenus: Menu[];
+  enable: boolean;
+  module: string;
+  displayed?: boolean;
+}
 
 @Component({
   selector: 'app-sidebar',
@@ -9,13 +23,10 @@ export class SidebarComponent implements OnInit {
   @Output() generalfixedAside = new EventEmitter<Boolean>();
 
   fixedAside = false;
-  sideNavState: boolean = true;
-  menuSelected: any = null;
-  panelOpenState = true;
-
-  menuList = [
+  menuList: Menu[] = [];
+  /* menuList = [
     {
-      icon: 'folder_special',
+      icon: 'admin_panel_settings',
       link: 'administracion',
       name: 'Administración',
       info: 'Administración de usuarios',
@@ -84,10 +95,21 @@ export class SidebarComponent implements OnInit {
       ],
     },
   ];
+ */
+  constructor(private permissionService: PermissionsService) {}
 
-  constructor() {}
+  ngOnInit(): void {
+    this.getMenu()
 
-  ngOnInit(): void {}
+  }
+
+  getMenu() {
+    this.permissionService.getMenu().subscribe((resp) => {
+      this.menuList = resp;
+
+      console.log('DATA',resp)
+    });
+  }
 
   clickLinkMenu() {
     this.menuList.forEach((item) => {

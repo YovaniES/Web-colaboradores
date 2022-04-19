@@ -6,10 +6,10 @@ import { Menu } from 'src/app/core/models/menu.models';
 import { PermissionsService } from 'src/app/services/permissions.service';
 import Swal from 'sweetalert2';
 
-export interface changeResponse{
-	message:string,
-	status:boolean,
-	previous?:string
+export interface changeResponse {
+  message: string;
+  status: boolean;
+  previous?: string;
 }
 
 @Component({
@@ -20,7 +20,7 @@ export interface changeResponse{
 export class ModalEditModuleComponent implements OnInit {
   @BlockUI() blockUI!: NgBlockUI;
 
-  modecode=''
+  modecode = '';
   menu: Menu = {
     code: '',
     text: '',
@@ -45,7 +45,14 @@ export class ModalEditModuleComponent implements OnInit {
     }
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (!this.data.isnew) this.menu = { ...this.data.module };
+
+    if (!this.data.ismodule) {
+      if (!this.data.isnew) this.modecode = this.data.module.module;
+      else this.modecode = this.data.module.code;
+    }
+  }
 
   save() {
     this.blockUI.start('Guardando...');
@@ -65,7 +72,7 @@ export class ModalEditModuleComponent implements OnInit {
     } else {
       this.menu.module = this.modecode;
       const sub: Subscription = this.permissionService
-        .postMenu$(this.menu)
+        .postMenu(this.menu)
         .subscribe((resp: any) => {
           this.blockUI.stop();
           if (resp.status) this.dialogRef.close(this.menu);
@@ -75,7 +82,6 @@ export class ModalEditModuleComponent implements OnInit {
     }
   }
 
-
   showAlertError(message: string) {
     Swal.fire({
       title: 'Error',
@@ -84,7 +90,6 @@ export class ModalEditModuleComponent implements OnInit {
     });
   }
 }
-
 
 /* OJO:
 .subscribe((resp: changeResponse) => {

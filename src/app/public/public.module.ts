@@ -8,6 +8,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { UsersQrComponent } from './validate-qr/users-qr/users-qr.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgQrScannerModule } from 'angular2-qrscanner';
+import { BlockUIModule } from 'ng-block-ui';
 
 
 @NgModule({
@@ -23,6 +24,8 @@ import { NgQrScannerModule } from 'angular2-qrscanner';
     ReactiveFormsModule,
     NgQrScannerModule,
     MaterialModule,
+    BlockUIModule.forRoot(),
+
   ]
 })
 export class PublicModule { }
