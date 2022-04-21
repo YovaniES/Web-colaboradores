@@ -33,8 +33,8 @@ export interface moduleDetails{
   code:string,
   name:string,
   menus:picklist[]
- /*  segments:picklist[],
-  functions:picklist[], */
+  segments:picklist[],
+  functions:picklist[],
 }
 
 export interface prMenus{
@@ -117,7 +117,7 @@ export class RolePermissionComponent implements OnInit {
   doGetModules() {
     this.loadingModules = true;
     const subs: Subscription = this.permissionsService
-      .getModules()
+      .getAllModules()
       .subscribe((r: moduleDetails[]) => {
         this.moduleList = r;
         this.loadingModules = false;

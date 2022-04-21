@@ -7,6 +7,7 @@
   font-family: 'Telefonica-Bold' !important;
   display: flex;
   align-items: center;
+  cursor: pointer;
   & mat-icon{
       margin: 0 5px;
   }
@@ -20,6 +21,7 @@
   background-color: #59C2C9;
   color: #fff;
   transition: ease .3s;
+  cursor: pointer;
   &:hover:enabled{
       background-color: #67E0E5;
   }
@@ -76,6 +78,7 @@
   }
   &-inactive{
       background-color: #E3A19A;
+      color: #FFF;
       margin: 1px 5px;
       padding: 0 3px;
       border-radius: 2px;
@@ -95,6 +98,7 @@
   align-items: center;
   margin: 0 2px;
   border-radius: 2px;
+  cursor: pointer;
   &:disabled{
       background-color: #F4F4F3;
       color: #fff;

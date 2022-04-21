@@ -28,25 +28,18 @@ export class ModuleMenusComponent implements OnInit {
     this.loading = true;
     const subs: Subscription = this.permissionService
       .getAllModules()
-      .subscribe((resp: any) => {
-        console.log('ABCMENU', resp)
+      .subscribe((resp:any) => {
+        console.log('DATAMENU', resp)
+
         this.listmodules = resp;
         this.loading = false;
         subs.unsubscribe();
       });
   }
 
-  openEditDialog(
-    idx: number,
-    module: Menu,
-    ismodule: boolean,
-    isnew: boolean,
-    modulename: string = ''
-  ) {
+  openEditDialog( idx: number, module:any, ismodule: boolean, isnew: boolean, modulename: string = '') {
     this.dialog
-      .open(ModalEditModuleComponent, {
-        data: { module, ismodule, isnew, modulename },
-      })
+      .open(ModalEditModuleComponent, { data: { module, ismodule, isnew, modulename } })
       .afterClosed()
       .subscribe((resp) => {
         if (resp) {

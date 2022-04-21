@@ -46,14 +46,14 @@
 
       <ng-container formArrayName="codeList">
         <ng-container *ngFor="let myCodeForm of codeList.controls; let i = index">
-          <!-- <div [formGroup]="myCodeForm">
+          <div [formGroupName]="i">
             <input
               class="cli-input input-codigo"
               placeholder="0"
               formControlName="codeValue"
               maxlength="1"
             />
-          </div> -->
+          </div>
           <span *ngIf="i==2 || i==5" class="spacer-input">,</span>
         </ng-container>
       </ng-container>
@@ -104,16 +104,15 @@
           *ngIf="!scanningQR"
           class="cli-btn btn-emerald"
           (click)="scanSiteQrCode()"
-        >
-          <mat-icon class="icon-18">qr_code_scanner</mat-icon>
+        ><mat-icon class="icon-18">qr_code_scanner</mat-icon>
           Scanea tu código
         </button>
+
         <button
           *ngIf="scanningQR"
           class="cli-btn btn-orange"
           (click)="stopScanningQr()"
-        >
-          Dejar de escanear
+        >Dejar de escanear
         </button>
       </div>
     </div>

@@ -29,9 +29,7 @@ const routes: Routes = [
       { path: 'home',
         loadChildren: () => import('./views/pages/home/home.module').then(m => m.HomeModule),
         canActivate: [ValidarTokenGuard],
-
-      }
-      ,
+      },
       { path: 'administracion',
         loadChildren: () => import('./views/pages/module-configuration/module-configuration.module').then(m => m.ModuleConfigurationModule)
       }

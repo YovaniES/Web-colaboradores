@@ -3,7 +3,7 @@
     {
       "nombre": "Diana Blanco Cordova",
       "correo": "LADY@experis.com",
-      "pais": "CHI",
+      "pais": "ARG",
       "genero": "F",
       "cargo": "Analista",
       "empresa": "EXPERIS",
@@ -35,7 +35,7 @@
       "correo": "DANIEL@indracompany.com",
       "pais": "URU",
       "genero": "M",
-      "cargo": "scrum",
+      "cargo": "Scrum Master",
       "empresa": "INDRA",
       "rol": "USER",
       "id": 4
@@ -243,11 +243,48 @@
       "enable": false
     }
   ],
-  "profile": {
-    "text": "typicode"
-  },
-  "menuList": [
+  "module": [
     {
+      "id": 1,
+      "code": "ADM",
+      "text": "Administración",
+      "order": 1,
+      "icon": "admin_panel_settings",
+      "type": "leo",
+      "link": "administracion",
+      "enable": true,
+      "module": "administrador4",
+      "displayed": false,
+      "submenus": [
+        {
+          "code": "ADM-001",
+          "text": "Usuarios",
+          "order": 1,
+          "icon": "person",
+          "type": "aei",
+          "link": "administracion/usuarios",
+          "enable": true,
+          "module": "ADM",
+          "displayed": true
+        }
+      ]
+    },
+    {
+      "code": "ABC",
+      "text": "ABAN",
+      "order": 2,
+      "icon": "clear",
+      "type": "",
+      "link": "",
+      "submenus": [],
+      "enable": "false",
+      "module": "ADD",
+      "id": 2
+    }
+  ],
+  "modules": [
+    {
+      "id": 1,
       "code": "ADM",
       "text": "Administración",
       "order": 1,
@@ -305,6 +342,7 @@
       ]
     },
     {
+      "id": 2,
       "code": "MAN",
       "text": "Mantenimiento",
       "order": 1,
@@ -340,10 +378,11 @@
       ]
     },
     {
+      "id": 3,
       "code": "PAS",
       "text": "Pases de usuarios",
       "order": 1,
-      "icon": "person",
+      "icon": "badge",
       "type": "leo",
       "link": "terceros",
       "enable": true,
@@ -354,7 +393,7 @@
           "code": "PAS-001",
           "text": "Pase de reunión",
           "order": 3,
-          "icon": "groups",
+          "icon": "format_list_numbered",
           "type": "oso",
           "link": "terceros/encuesta",
           "enable": true,

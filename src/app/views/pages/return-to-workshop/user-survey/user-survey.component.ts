@@ -17,12 +17,14 @@ export interface UserRestriction {
 export class UserSurveyComponent implements OnInit {
 
   public myAngularxQrCode: string = '';
+  showQuiz = false;
   cargando: boolean = true;
   usuario: any = {
   acepta: '',
   };
   encuestaList: Encuesta[] = [];
   validForm: boolean = false;
+  submitForm = false;
 
   constructor(private usuarioService: UsuarioService, private router: Router)
   {
@@ -33,12 +35,17 @@ export class UserSurveyComponent implements OnInit {
     this.obternerEncuesta();
   }
 
+
+  onShowQuiz(){
+    this.showQuiz = true;
+  }
+
   obternerEncuesta() {
     this.cargando = true;
-    this.usuarioService.getEncuesta().subscribe((res: any) => {
-      if (res && res.length) {
-        this.encuestaList = res;
-        console.log('COMPANY', res);
+    this.usuarioService.getEncuesta().subscribe((resp: any) => {
+      if (resp && resp.length) {
+        this.encuestaList = resp;
+        console.log('COMPANY', resp);
         this.cargando = false;
       }
     });
@@ -52,8 +59,9 @@ export class UserSurveyComponent implements OnInit {
         .filter((item) => item.responseValue).length == this.encuestaList.length;
   }
 
+
   guardar() {
-    const request = this.encuestaList.map((item) => {
+    const request = this.encuestaList.filter((item) => {
       return {
         id    : item.id,
         nombre: item.label,
@@ -61,21 +69,24 @@ export class UserSurveyComponent implements OnInit {
       };
     });
 
-    this.usuarioService.saveEncuesta(request).subscribe((res: any) => {
-      if (res) {
+    this.usuarioService.saveEncuesta(request).subscribe((resp: any) => {
+      if (resp) {
         const isInvalid = this.encuestaList.find((item) => item.enable);
+
+
         console.log(isInvalid);
         Swal.fire(
           'Encuesta completada!',
-          'Su pase es exitoso..Felicidades',
+          'Su pase es exitoso.. Felicidades',
           'success'
         );
 
         if (isInvalid) {
           Swal.fire('Error', 'Faltan requisitos por completar', 'error');
-          this.router.navigateByUrl('/public/qr');
+          this.router.navigateByUrl('/home');
         } else {
-          this.router.navigateByUrl('dashboard/pases');
+          this.submitForm = true;
+          //this.router.navigateByUrl('terceros/pases');
         }
       }
     });
@@ -84,6 +95,6 @@ export class UserSurveyComponent implements OnInit {
   }
 
   irEncuesta() {
-    this.router.navigateByUrl('dashboard/encuesta');
+    this.router.navigateByUrl('terceros/pases');
   }
 }

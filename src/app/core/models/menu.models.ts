@@ -6,8 +6,8 @@ export interface Menu{
   icon:string,
   type:string,
   link:string,
-  submenus:Menu[]
   enable:boolean,
   module:string,
   displayed?: boolean,
+  submenus:Menu[]
 }

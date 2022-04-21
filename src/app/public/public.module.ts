@@ -6,7 +6,7 @@ import { MaterialModule } from '../material/material.module';
 import { PublicComponent } from './validate-qr/public.component';
 import { LayoutModule } from '../layout/layout.module';
 import { UsersQrComponent } from './validate-qr/users-qr/users-qr.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgQrScannerModule } from 'angular2-qrscanner';
 import { BlockUIModule } from 'ng-block-ui';
 
@@ -22,6 +22,7 @@ import { BlockUIModule } from 'ng-block-ui';
     LayoutModule,
 
     ReactiveFormsModule,
+    FormsModule,
     NgQrScannerModule,
     MaterialModule,
     BlockUIModule.forRoot(),

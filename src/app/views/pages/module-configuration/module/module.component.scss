@@ -41,6 +41,7 @@
   background-color: #59C2C9;
   color: #fff;
   transition: ease .3s;
+  cursor: pointer;
   &:hover:enabled{
       background-color: #67E0E5;
   }
@@ -52,6 +53,7 @@
 .btn-trans{
   background-color: transparent;
   transition: ease .3s;
+  cursor: pointer;
   &:hover:enabled{
       background-color: #00000014;
   }
