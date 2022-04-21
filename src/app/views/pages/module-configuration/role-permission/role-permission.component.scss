@@ -185,6 +185,7 @@
   font-family: 'Telefonica-Bold' !important;
   display: flex;
   align-items: center;
+  cursor: pointer;
   & mat-icon{
       margin: 0 5px;
   }
@@ -193,13 +194,20 @@
       color: #fff;
   }
 }
+
+.flex-1X{
+    flex: 1 1;
+}
 .btn-l{
   height: 38px;
   padding: 0 30px;
 }
+
 .btn-grey{
   background-color: #E9EAE8;
   transition: ease .3s;
+  width: 160px;
+  justify-content: center;
   &:hover:enabled{
       background-color: #F4F4F3;
   }
@@ -208,14 +216,15 @@
   }
 }
 
-.btn-blue{
-  background-color: #0066FF;
+.btn-turq{
+  background-color: #59C2C9;
   color: #fff;
   transition: ease .3s;
+  cursor: pointer;
   &:hover:enabled{
-      background-color: #80B0FF;
+      background-color: #67E0E5;
   }
   &:hover:enabled:active{
-      background-color: #003180;
+      background-color: #3E8A8A;
   }
 }
