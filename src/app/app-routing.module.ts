@@ -12,8 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () =>
-      import('./views/auth/auth.module').then((m) => m.AuthModule),
+    loadChildren: () => import('./views/auth/auth.module').then((m) => m.AuthModule),
     canActivate: [NoAuthGuard],
   },
   {
@@ -33,7 +32,6 @@ const routes: Routes = [
       { path: 'administracion',
         loadChildren: () => import('./views/pages/module-configuration/module-configuration.module').then(m => m.ModuleConfigurationModule)
       },
-
       { path: '', redirectTo: 'home', pathMatch: 'full'},
       { path: '**', pathMatch: 'full', redirectTo: '/home' },
     ],
