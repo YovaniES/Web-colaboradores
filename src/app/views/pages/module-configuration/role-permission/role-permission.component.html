@@ -33,14 +33,14 @@
           <mat-icon class="icon-20">search</mat-icon>
 
           <!-- RESULTADOS BUSQUEDA -->
-          <!-- <cli-picklist
+          <cli-picklist
             [showsubtitle]="true"
             *ngIf="searchshowresult"
             [items]="searchresult"
             (close)="searchshowresult = false"
             (result)="doPickUser($event)"
           ></cli-picklist>
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -115,9 +115,10 @@
       *ngIf="selectedModule != 'N/A' && !loadingModules"
       class="cli-form-buttons"
     >
-      <button class="cli-btn btn-l btn-grey">Restaurar</button>
-      <div class="flex-1"></div>
-      <button (click)="doRequestPermissions()" class="cli-btn btn-l btn-blue">
+      <!-- <button class="cli-btn btn-l btn-grey">Restaurar</button>
+      <div class="flex-1"></div> -->
+      <button (click)="doRequestPermissions()"
+              class="cli-btn btn-l btn-turq">
         Asignar permisos
       </button>
     </div>

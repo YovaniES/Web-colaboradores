@@ -380,7 +380,7 @@
     {
       "id": 3,
       "code": "PAS",
-      "text": "Pases de usuarios",
+      "text": "Pase de usuarios",
       "order": 1,
       "icon": "badge",
       "type": "leo",

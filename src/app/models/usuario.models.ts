@@ -1,5 +1,4 @@
 export class Usuario {
-
   constructor(
     public id: number,
     public nombre: string,
@@ -12,10 +11,10 @@ export class Usuario {
 }
 
 export interface Encuesta {
-    id: number;
-    label:string;
-    icon: string;
-    country: string;
-    enable: boolean;
-    responseValue?: string;
+  id: number;
+  label: string;
+  icon: string;
+  country: string;
+  enable: boolean;
+  responseValue?: string;
 }

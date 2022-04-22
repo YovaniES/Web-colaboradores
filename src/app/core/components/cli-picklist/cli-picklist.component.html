@@ -1,0 +1,13 @@
+<div
+  #toggleButton
+  [ngClass]="{ 'l-side': side == 'left', 'r-side': side == 'right' }"
+  class="picklist-menu"
+>
+  <div *ngFor="let i of items" class="picklist-option" (click)="pick(i)">
+    <div style="line-height: 1rem">{{ i.name }}</div>
+    <div class="piclist-subtitle" *ngIf="showsubtitle">{{ i.filter }}</div>
+  </div>
+  <div *ngIf="items.length == 0" class="picklist-noresult">
+    No hay resultados para esta búsqueda
+  </div>
+</div>

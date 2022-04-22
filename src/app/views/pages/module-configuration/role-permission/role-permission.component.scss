@@ -208,14 +208,16 @@
   }
 }
 
-.btn-blue{
-  background-color: #0066FF;
+.btn-turq{
+  background-color: #59C2C9;
   color: #fff;
   transition: ease .3s;
+  cursor: pointer;
   &:hover:enabled{
-      background-color: #80B0FF;
+      background-color: #67E0E5;
   }
   &:hover:enabled:active{
-      background-color: #003180;
+      background-color: #3E8A8A;
   }
 }
+
