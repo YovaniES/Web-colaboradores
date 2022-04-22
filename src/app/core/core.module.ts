@@ -18,7 +18,6 @@ import { CliPicklistComponent } from './components/cli-picklist/cli-picklist.com
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-
     CliPicklistComponent,
   ]
 })

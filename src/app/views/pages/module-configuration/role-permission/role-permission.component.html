@@ -8,7 +8,8 @@
         <div
           [@fadeanimation]="'in'"
           *ngFor="let u of users; let idx = index"
-          class="pr-username">
+          class="pr-username"
+        >
           {{ u.value }}
           <button
             (click)="users.splice(idx, 1)"
@@ -55,20 +56,21 @@
         class="pr-moduleselector"
       >
         <option value="N/A" disabled>--Seleccionar--</option>
-        <option *ngFor="let mo of moduleList" [value]="mo.code">
-          {{ mo.name }}
+        <option *ngFor="let modulo of moduleList"
+                [value]="modulo.code">
+                {{ modulo.name }}
         </option>
       </select>
       <ng-container *ngIf="selectedModule != 'N/A' && !loadingModules">
         <!-- MENÚS -->
         <div class="pr-segment-container" style="margin-top: 5px">
           <div class="pr-segment-title">Menús</div>
-          <div class="pr-checkoptions" *ngFor="let m of mmenus">
-            <mat-checkbox class="pr-segment" [(ngModel)]="m.selected">
-              <mat-icon class="icon-18 iconmr-10">{{ m.icon }}</mat-icon>
-              {{ m.name }}
-            </mat-checkbox
-            >
+          <div class="pr-checkoptions" *ngFor="let modMenu of modMenusList">
+            <mat-checkbox class="pr-segment"
+                          [(ngModel)]="modMenu.selected">
+              <mat-icon class="icon-18 iconmr-10">{{ modMenu.icon }}</mat-icon>
+              {{ modMenu.name }}
+            </mat-checkbox>
           </div>
         </div>
 

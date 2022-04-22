@@ -8,5 +8,4 @@ export const API_MODULES = MAIN_PATH + '/modules';
 export const API_MODULE = MAIN_PATH + '/module';
 //export const API_MENU = MAIN_PATH + "/menu"
 export const API_MENU = MAIN_PATH + '/modules';
-
 export const API_ASSIGN_ROL = MAIN_PATH + '/addrole';

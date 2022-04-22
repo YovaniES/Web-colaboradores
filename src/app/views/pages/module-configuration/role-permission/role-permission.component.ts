@@ -5,8 +5,13 @@ import { changeResponse } from 'src/app/core/models/backend.models';
 import { picklist } from 'src/app/models';
 import { PermissionsService } from 'src/app/services/permissions.service';
 import Swal from 'sweetalert2';
-import { moduleDetails, permissionRequest, prFunc, prMenus, useritem } from '../module-config';
-
+import {
+  moduleDetails,
+  permissionRequest,
+  prFunc,
+  prMenus,
+  useritem,
+} from '../module-config';
 
 @Component({
   selector: 'app-role-permission',
@@ -32,14 +37,14 @@ export class RolePermissionComponent implements OnInit {
   loadingModules = false;
   moduleList: moduleDetails[] = [];
   selectedModule: string = 'N/A';
-  smoduledata: moduleDetails[]=[];
+  smoduledata: moduleDetails[] = [];
 
-  mmenus: prMenus[] = [];
+  modMenusList: prMenus[] = [];
   mfunction: prFunc[] = [];
   msegment: prMenus[] = [];
 
-   //----------------- ASIGNACIÓN
-   request: permissionRequest = {
+  //----------------- ASIGNACIÓN
+  request: permissionRequest = {
     module: '',
     users: [],
     menus: [],
@@ -56,30 +61,6 @@ export class RolePermissionComponent implements OnInit {
         subs.unsubscribe();
       }); */
   }
-  doCancelSearch() {
-    this.searchresult = [];
-    this.searchtext = '';
-    this.searchshowresult = false;
-  }
-  doPickUser(element: any) {
-    this.users.push({ id: element.id, value: element.name });
-    this.doCancelSearch();
-  }
-
-  doPickModule(code: string) {
-    /* this.smoduledata = { ...this.moduleList.find((p) => p.code == code) };
-    this.mmenus = this.smoduledata.menus.map((m) => {
-      return { code: m.code, name: m.name, icon: m.filter, selected: false };
-    }); */
-
-
-   /*  this.msegment = this.smoduledata.segments.map((m) => {
-      return { code: m.code, name: m.name, icon: null, selected: false };
-    });
-    this.mfunction = this.smoduledata.functions.map((m) => {
-      return { code: m.code, name: m.name, lvl: 'N/A' };
-    }); */
-  }
 
   doGetModules() {
     this.loadingModules = true;
@@ -92,11 +73,34 @@ export class RolePermissionComponent implements OnInit {
       });
   }
 
+  doCancelSearch() {
+    this.searchresult = [];
+    this.searchtext = '';
+    this.searchshowresult = false;
+  }
+  doPickUser(element: any) {
+    this.users.push({ id: element.id, value: element.name });
+    this.doCancelSearch();
+  }
+
+  doPickModule(code: string) {
+    /* this.smoduledata = { ...this.moduleList.find((p) => p.code == code) };
+
+    this.modMenusList = this.smoduledata.menus.map((m) => {
+      return { code: m.code, name: m.name, icon: m.filter, selected: false };
+    }); */
+    /*  this.msegment = this.smoduledata.segments.map((m) => {
+      return { code: m.code, name: m.name, icon: null, selected: false };
+    });
+    this.mfunction = this.smoduledata.functions.map((m) => {
+      return { code: m.code, name: m.name, lvl: 'N/A' };
+    }); */
+  }
 
   doRequestPermissions() {
     this.request.users = this.users.map((u) => u.id);
     //this.request.module = this.smoduledata.code;
-    this.request.menus = this.mmenus
+    this.request.menus = this.modMenusList
       .filter((f) => f.selected)
       .map((m) => m.code);
     this.request.segments = this.msegment
