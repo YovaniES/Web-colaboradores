@@ -32,11 +32,12 @@ const routes: Routes = [
       },
       { path: 'administracion',
         loadChildren: () => import('./views/pages/module-configuration/module-configuration.module').then(m => m.ModuleConfigurationModule)
-      }
+      },
+
+      { path: '', redirectTo: 'home', pathMatch: 'full'},
+      { path: '**', pathMatch: 'full', redirectTo: '/home' },
     ],
-  },
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: '**', pathMatch: 'full', redirectTo: '/home' },
+  }
 ];
 
 @NgModule({
