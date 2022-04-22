@@ -75,44 +75,36 @@
         </div>
 
         <!-- FUNCIONES -->
-        <div class="pr-module-container">
+       <!--  <div class="pr-module-container">
           <div class="pr-segment-title">Funciones</div>
 
           <div *ngFor="let f of mfunction" class="pr-function">
             <div class="pr-function-label">{{ f.name }}</div>
             <mat-radio-group [(ngModel)]="f.lvl" class="pr-function-group">
-              <div class="pr-function-option">
-                <mat-radio-button value="N/A">N/A</mat-radio-button>
-              </div>
-              <div class="pr-function-option">
-                <mat-radio-button value="READ">READ</mat-radio-button>
-              </div>
-              <div class="pr-function-option">
-                <mat-radio-button value="UPDATE">UPDATE</mat-radio-button>
-              </div>
-              <div class="pr-function-option">
-                <mat-radio-button value="CREATE">CREATE</mat-radio-button>
-              </div>
+              <div class="pr-function-option"><mat-radio-button value="N/A">N/A</mat-radio-button></div>
+              <div class="pr-function-option"><mat-radio-button value="READ">READ</mat-radio-button></div>
+              <div class="pr-function-option"><mat-radio-button value="UPDATE">UPDATE</mat-radio-button></div>
+              <div class="pr-function-option"><mat-radio-button value="CREATE">CREATE</mat-radio-button></div>
             </mat-radio-group>
           </div>
-        </div>
+        </div> -->
+
         <!-- SEGMENTOS -->
-        <div class="pr-segment-container">
+        <!-- <div class="pr-segment-container">
           <div class="pr-segment-title">Segmentos</div>
           <div *ngFor="let s of msegment" class="pr-checkoptions">
             <mat-checkbox [(ngModel)]="s.selected" class="pr-segment">{{
               s.name
             }}</mat-checkbox>
           </div>
-        </div>
+        </div> -->
       </ng-container>
       <div class="pr-loading" *ngIf="loadingModules">
         <mat-spinner [diameter]="40"></mat-spinner>
       </div>
     </div>
 
-
-    <!-- ACCIONES -->
+    <!-- BOTON ACCIONES -->
     <div
       *ngIf="selectedModule != 'N/A' && !loadingModules"
       class="cli-form-buttons"

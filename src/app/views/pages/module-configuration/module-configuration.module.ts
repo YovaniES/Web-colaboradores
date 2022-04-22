@@ -6,12 +6,16 @@ import { RolePermissionComponent } from './role-permission/role-permission.compo
 import { MaterialModule } from 'src/app/material/material.module';
 import { ModuleMenusComponent } from './module/module-menus/module-menus.component';
 import { CoreModule } from 'src/app/core/core.module';
+import { UsersComponent } from './users/users.component';
+import { UsersTableComponent } from './users/users-table/users-table.component';
 
 
 @NgModule({
   declarations: [
     ModuleComponent,
     RolePermissionComponent,
+    UsersComponent,
+    UsersTableComponent,
 
     ModalEditModuleComponent,
     ModuleMenusComponent,
