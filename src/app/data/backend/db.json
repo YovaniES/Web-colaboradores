@@ -1,5 +1,5 @@
 {
-  "UsuariosList": [
+  "users": [
     {
       "nombre": "Diana Blanco Cordova",
       "correo": "LADY@experis.com",
@@ -211,6 +211,21 @@
       "id": 6
     }
   ],
+
+  "appmods":[
+    { "code":"a",
+      "name": "adminisTracion",
+      "menus":[{"name":"ADM"}]
+    },
+    { "code":"b",
+      "name": "talento",
+      "menus":[{"name":"tal"},{"name":"mal"} ]
+    },
+    { "code":"c",
+      "name": "empresa",
+      "menus":[{"name":"emp"},{"name":"rio"} ]
+    }
+  ],
   "listPases": [
     {
       "id": 1,
@@ -407,6 +422,31 @@
           "icon": "checklist_rtl",
           "type": "oso",
           "link": "terceros/pases",
+          "enable": true,
+          "module": "PAS",
+          "displayed": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "code": "HER",
+      "text": "Pase de usuarios",
+      "order": 1,
+      "icon": "build",
+      "type": "leo",
+      "link": "herramientas",
+      "enable": true,
+      "module": "administrador",
+      "displayed": false,
+      "submenus": [
+        {
+          "code": "PAS-001",
+          "text": "Pase de reunión",
+          "order": 3,
+          "icon": "format_list_numbered",
+          "type": "oso",
+          "link": "herramientas/encuesta",
           "enable": true,
           "module": "PAS",
           "displayed": false

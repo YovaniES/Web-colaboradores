@@ -7,10 +7,10 @@
       <div class="pr-userscontainer">
         <div
           [@fadeanimation]="'in'"
-          *ngFor="let u of users; let idx = index"
+          *ngFor="let user of users; let idx = index"
           class="pr-username"
         >
-          {{ u.value }}
+          {{ user.value }}
           <button
             (click)="users.splice(idx, 1)"
             class="icon-btn btn-trans c-male"
@@ -50,20 +50,21 @@
     <div class="pr-section">
       <!-- SELECTOR DE MÓDULO -->
       <select
+        class="pr-moduleselector"
         *ngIf="!loadingModules"
         (ngModelChange)="doPickModule($event)"
         [(ngModel)]="selectedModule"
-        class="pr-moduleselector"
-      >
-        <option value="N/A" disabled>--Seleccionar--</option>
+      > <option value="N/A" disabled>--Seleccionar--</option>
         <option *ngFor="let modulo of moduleList"
                 [value]="modulo.code">
                 {{ modulo.name }}
         </option>
       </select>
+
       <ng-container *ngIf="selectedModule != 'N/A' && !loadingModules">
         <!-- MENÚS -->
-        <div class="pr-segment-container" style="margin-top: 5px">
+        <div class="pr-segment-container"
+             style="margin-top: 5px">
           <div class="pr-segment-title">Menús</div>
           <div class="pr-checkoptions" *ngFor="let modMenu of modMenusList">
             <mat-checkbox class="pr-segment"
@@ -75,7 +76,7 @@
         </div>
 
         <!-- FUNCIONES -->
-       <!--  <div class="pr-module-container">
+        <div class="pr-module-container">
           <div class="pr-segment-title">Funciones</div>
 
           <div *ngFor="let f of mfunction" class="pr-function">
@@ -87,7 +88,7 @@
               <div class="pr-function-option"><mat-radio-button value="CREATE">CREATE</mat-radio-button></div>
             </mat-radio-group>
           </div>
-        </div> -->
+        </div>
 
         <!-- SEGMENTOS -->
         <!-- <div class="pr-segment-container">

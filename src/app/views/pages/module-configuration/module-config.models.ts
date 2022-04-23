@@ -4,8 +4,8 @@ export interface permissionRequest {
   module: string;
   users: number[];
   menus: string[];
-  segments: string[];
-  functions: roleSelector[];
+  // segments: string[];
+  // functions: roleSelector[];
 }
 export interface useritem {
   id: number;

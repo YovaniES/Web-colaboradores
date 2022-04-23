@@ -34,12 +34,12 @@
   font-family: 'Telefonica-Bold';
 }
 
-.pr-section{
+/* .pr-section{
   margin-left: 10px;
   padding-left: 20px;
   padding-top: 10px;
-  border-left: 3px solid #2B3447;
-}
+  border-left: 2px solid #d3d3d4;
+} */
 
 
 /* PERMISSIONS */
@@ -77,7 +77,7 @@
 }
 .pr-sugget{
     font-size: .9rem;
-    color: #B6B7B7;
+    color: #b7b6b7;
 }
 .pr-subtitle{
     font-size: 1.2rem;
@@ -93,7 +93,7 @@
     margin-left: 10px;
     padding-left: 20px;
     padding-top: 10px;
-    border-left: 3px solid #2B3447;
+    border-left: 2px solid #d3d3d4;
 }
 .pr-module{
     &-container{
@@ -165,7 +165,35 @@
         width: 25%;
     }
 }
-
+/* .status-btn{
+  position: relative;
+  margin: 0 5px;
+  & button{
+      display: flex;
+      align-items: center;
+      padding: 2px 10px;
+      border-radius: 2px;
+  }
+}
+.cli-input-white{
+  border: solid 1px #B6B7B7;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 5px 10px;
+  transition: ease .3s;
+  width: 100%;
+  &:hover:enabled{
+      border-color: #0066FF;
+  }
+  &:focus:enabled{
+      background-color: transparent;
+      border-color: #0066FF;
+  }
+  &:disabled{
+      background-color: #f8f8f8;
+      color: #86888C;
+  }
+} */
 .cli-form{
   &-buttons{
     width: 100%;

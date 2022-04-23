@@ -2,11 +2,11 @@ let MAIN_PATH = 'http://localhost:3000';
 
 
 // AUTH
-export const API_USERS = MAIN_PATH + '/UsuariosList'
+export const API_USERS = MAIN_PATH + '/users'
 
 
 // MODULES
-export const API_GET_MODULES = MAIN_PATH + "/modules"
+export const API_GET_MODULES = MAIN_PATH + "/appmods" //    modules -> appmods
 export const API_USERS_SEARCH = MAIN_PATH + '/search/users';
 
 //export const API_MODULES = MAIN_PATH + "/modules"

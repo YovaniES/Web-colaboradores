@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { API_USERS } from '../core/constants/url.constants';
 import { Usuario } from '../models/usuario.models';
 
 @Injectable({
@@ -11,22 +13,20 @@ export class ModalUserService {
   constructor(private http: HttpClient) { }
 
 
-  urlUser = 'http://localhost:3000/UsuariosList'
-
   crearUsuario(data:any){
-    return this.http.post<any>(this.urlUser, data)
+    return this.http.post<any>(API_USERS, data)
   }
 
-  obtenerUsuario(){
-    return this.http.get<any>(this.urlUser)
+  obtenerUsuario():Observable<any>{
+    return this.http.get<any>(API_USERS)
   }
 
   updateUsers(data:any, id:number){
-    return this.http.put(this.urlUser +'/'+ id, data)
+    return this.http.put(API_USERS +'/'+ id, data)
   }
 
   deleteUsers(id: number){
-    const url = `${this.urlUser}/${id}`
+    const url = `${API_USERS}/${id}`
     return this.http.delete<any>(url)
   }
 
