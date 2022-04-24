@@ -8,6 +8,7 @@ import { ModuleMenusComponent } from './modules/module-menus/module-menus.compon
 import { CoreModule } from 'src/app/core/core.module';
 import { UsersComponent } from './users/users.component';
 import { UsersTableComponent } from './users/users-table/users-table.component';
+import { MaintenanceModule } from '../maintenance/maintenance.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { UsersTableComponent } from './users/users-table/users-table.component';
     ModuleConfigurationRoutingModule,
 
     MaterialModule,
+    MaintenanceModule,
   ],
   entryComponents:[ModalEditModuleComponent]
 })

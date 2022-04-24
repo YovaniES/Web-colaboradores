@@ -21,10 +21,9 @@ export class ListOfPassesComponent implements OnInit {
 
   getListOfPasses() {
     this.cargando = true;
-    this.listPassesService.getListOfPasses()
-        .subscribe((res) => {
-          this.listPasses = res;
-          this.cargando = false;
+    this.listPassesService.getListOfPasses().subscribe((res) => {
+      this.listPasses = res;
+      this.cargando = false;
     });
   }
 
@@ -37,8 +36,7 @@ export class ListOfPassesComponent implements OnInit {
       confirmButtonText: 'Si, eliminar',
     }).then((result) => {
       if (result.value) {
-        this.listPassesService.deleteListPasses(list.id)
-        .subscribe((resp) => {
+        this.listPassesService.deleteListPasses(list.id).subscribe((resp) => {
           this.getListOfPasses();
           Swal.fire(
             'Pase eliminado',
@@ -50,18 +48,23 @@ export class ListOfPassesComponent implements OnInit {
     });
   }
 
-  cambiarPagina(valor: number) {
-    this.pagActual += valor;
+  // VERIFICCAR
+  cambiarPagina() {
+    this.pagActual += 5;
     if (this.pagActual < 0) {
-      console.log(this.pagActual);
-
       this.pagActual = 0;
     } else {
-      this.pagActual -= valor;
-      console.log(this.pagActual);
+      this.pagActual -= 5;
     }
     this.getListOfPasses();
   }
+
+  nextPage(valor:number) {
+    this.pagActual += 5;
+  }
+
+  prevPage(valor:number) {
+    if (this.pagActual > 0)
+      this.pagActual -= 5;
+  }
 }
-
-

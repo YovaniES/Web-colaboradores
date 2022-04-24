@@ -21,6 +21,9 @@ import { CoreModule } from 'src/app/core/core.module';
     CoreModule,
 
   ],
+  exports:[
+    UsuariosListComponent,
+  ],
 
   entryComponents: [ModalUsersComponent, ModalCompaniesComponent],
 })

@@ -211,19 +211,78 @@
       "id": 6
     }
   ],
-
-  "appmods":[
-    { "code":"a",
-      "name": "adminisTracion",
-      "menus":[{"name":"ADM"}]
+  "appmods": [
+    {
+      "code": "ADM",
+      "name": "Administración",
+      "menus": [
+        {
+          "id": 1,
+          "code": "ADM-001",
+          "name": "usuario",
+          "filter": "usu"
+        },
+        {
+          "id": 2,
+          "code": "ADM-002",
+          "name": "Permisos",
+          "filter": "per"
+        },
+        {
+          "id": 3,
+          "code": "ADM-003",
+          "name": "Módulos",
+          "filter": "mod"
+        }
+      ]
     },
-    { "code":"b",
-      "name": "talento",
-      "menus":[{"name":"tal"},{"name":"mal"} ]
+    {
+      "code": "MAN",
+      "name": "Mantenimiento2",
+      "menus": [
+        {
+          "id": 1,
+          "code": "MAN-001",
+          "name": "Empresas",
+          "filter": "emp"
+        },
+        {
+          "id": 2,
+          "code": "MAN-002",
+          "name": "Usuarios",
+          "filter": "usu"
+        }
+      ]
     },
-    { "code":"c",
-      "name": "empresa",
-      "menus":[{"name":"emp"},{"name":"rio"} ]
+    {
+      "code": "PAS",
+      "name": "Pase de usuarios",
+      "menus": [
+        {
+          "id": 1,
+          "code": "PASS-001",
+          "name": "Pase de reunión",
+          "filter": "pas"
+        },
+        {
+          "id": 2,
+          "code": "PASS-002",
+          "name": "Lista de pases",
+          "filter": "list"
+        }
+      ]
+    },
+    {
+      "code": "HER",
+      "name": "Herramientas",
+      "menus": [
+        {
+          "id": 1,
+          "code": "HER-001",
+          "name": "Config",
+          "filter": "con"
+        }
+      ]
     }
   ],
   "listPases": [
@@ -254,6 +313,35 @@
     },
     {
       "id": 6,
+      "date": "25-03-2022",
+      "enable": false
+    },{
+      "id": 7,
+      "date": "20-03-2022",
+      "enable": false
+    },
+    {
+      "id": 8,
+      "date": "20-03-2022",
+      "enable": true
+    },
+    {
+      "id": 9,
+      "date": "20-02-2022",
+      "enable": true
+    },
+    {
+      "id": 10,
+      "date": "4-03-2022",
+      "enable": false
+    },
+    {
+      "id": 11,
+      "date": "10-03-2022",
+      "enable": false
+    },
+    {
+      "id": 12,
       "date": "25-03-2022",
       "enable": false
     }

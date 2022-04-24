@@ -6,6 +6,7 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { ListOfPassesComponent } from './list-of-passes/list-of-passes.component';
 import { UserSurveyComponent } from './user-survey/user-survey.component';
 import { QRCodeModule } from 'angularx-qrcode';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { QRCodeModule } from 'angularx-qrcode';
     ReturnToWorkshopRoutingModule,
     MaterialModule,
     QRCodeModule,
+    CoreModule
 
   ]
 })

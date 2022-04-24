@@ -66,7 +66,7 @@
         <div class="pr-segment-container"
              style="margin-top: 5px">
           <div class="pr-segment-title">Menús</div>
-          <div class="pr-checkoptions" *ngFor="let modMenu of modMenusList">
+          <div class="pr-checkoptions" *ngFor="let modMenu of modMenus">
             <mat-checkbox class="pr-segment"
                           [(ngModel)]="modMenu.selected">
               <mat-icon class="icon-18 iconmr-10">{{ modMenu.icon }}</mat-icon>
