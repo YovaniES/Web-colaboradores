@@ -40,7 +40,7 @@
 <table class="cli-table stripedtable underlinedtable">
   <thead>
     <tr class="bold c-male">
-      <th><mat-checkbox color="primary"></mat-checkbox></th>
+      <th><mat-checkbox></mat-checkbox></th>
       <th>ID</th>
       <th>Displayname</th>
       <th>Username</th>
@@ -50,14 +50,14 @@
   </thead>
   <tbody>
     <tr *ngFor="let user of data; let i = index">
-      <td><mat-checkbox color="primary"></mat-checkbox></td>
+      <td><mat-checkbox></mat-checkbox></td>
       <td>{{ user.id }}</td>
-      <td>{{ user.displayname }}</td>
-      <td>{{ user.username }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
       <td>
-        <select [(ngModel)]="user.enable" class="cli-input-white">
-          <option value="true">Activo</option>
-          <option value="false">Inactivo</option>
+        <select [(ngModel)]="user.rol" class="cli-input-white">
+          <option value="true">User</option>
+          <option value="false">Gestor</option>
         </select>
       </td>
       <td>
@@ -67,13 +67,13 @@
             matTooltip="Editar"
             class="icon-btn btn-trans btn-trans c-dark"
           >
-            <mat-icon class="icon-18">edit</mat-icon>
+            <mat-icon class="icon-18 c-blue">edit</mat-icon>
           </button>
           <button
             matTooltip="Eliminar"
             class="icon-btn btn-trans btn-trans c-dark"
           >
-            <mat-icon class="icon-18">delete_forever</mat-icon>
+            <mat-icon class="icon-18 c-fucsia">delete_forever</mat-icon>
           </button>
         </div>
       </td>

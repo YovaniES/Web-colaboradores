@@ -1,15 +1,13 @@
-<div class="global-content">
+<div class="cli-card fit-card">
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">
-          Usuarios registrados en la Web de Terceros
-        </h4>
+        <h4 class="card-title">Usuarios registrados en la Web de Terceros</h4>
         <h5 class="card-subtitlte">
           Total Usuarios registrados ({{ totalUsuarios }})
         </h5>
 
-        <div class="row">
+        <div class="cli-tablebar">
           <div class="cli-table-search">
             <input
               matInput
@@ -22,12 +20,12 @@
             <mat-icon class="icon-20">search</mat-icon>
           </div>
 
-          <div class="cli-formd-element">
-            <label for="" style="margin: 10px 12px; font-size: 12px"
-              >Seleccione la empresa</label
-            >
+          <!-- Selecione Empresa -->
+          <div class="flex-1"></div>
+          <div>Selecione empresa:</div>
+          <div class="status-btn">
             <select class="cli-input-white" [formControl]="companyValue">
-              <option value="" disabled> Seleccionar</option>
+              <option value="" disabled>Seleccionar</option>
               <option value="">Todas</option>
               <option value="EXPERIS">Experis</option>
               <option value="INDRA">Indra</option>
@@ -119,7 +117,7 @@
                     matTooltip="Eliminar"
                     class="icon-btn btn-trans c-fucsia"
                   >
-                    <mat-icon>delete</mat-icon>
+                    <mat-icon>delete_forever</mat-icon>
                   </button>
                 </div>
               </td>
@@ -149,7 +147,9 @@
         cargando...
       </div>
 
-      <!-- <div *ngIf="!loadingItem && data.length == 0" class="cli-loader">No hay elementos para mostrar</div> -->
+      <div *ngIf="!loadingItem && totalUsuarios == 0" class="cli-loader">
+        No hay elementos para mostrar
+      </div>
 
       <div
         *ngIf="!loadingItem && table_settings.pages > 1"

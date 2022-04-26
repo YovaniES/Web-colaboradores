@@ -8,7 +8,8 @@ import {
 import { Component, OnInit } from '@angular/core';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { Subscription } from 'rxjs';
-import { changeResponse, picklist } from 'src/app/models';
+import { picklist } from 'src/app/core/models';
+// import { changeResponse, picklist } from 'src/app/models';
 import { PermissionsService } from 'src/app/services/permissions.service';
 import Swal from 'sweetalert2';
 import {
@@ -57,6 +58,15 @@ export class RolePermissionComponent implements OnInit {
   modMenus: prMenus[] = [];
   mfunction: prFunc[] = [];
   msegment: prMenus[] = [];
+
+  //----------------- ASIGNACIÓN
+  request: permissionRequest = {
+    module: '',
+    users: [],
+    menus: [],
+    // segments: [],
+    // functions: [],
+  };
 
   /*  ELIMINAR ----
   export interface prFunc {
@@ -116,25 +126,30 @@ export class RolePermissionComponent implements OnInit {
     }
   ]
 
+
+
+
+     {
+      "nombre": "Diana Blanco Cordova",
+      "correo": "LADY@experis.com",
+      "pais": "ARG",
+      "genero": "F",
+      "cargo": "Analista",
+      "empresa": "EXPERIS",
+      "rol": "GESTOR",
+      "id": 1
+    },
+
   } */
 
-  //----------------- ASIGNACIÓN
-  request: permissionRequest = {
-    module: '',
-    users: [],
-    menus: [],
-    // segments: [],
-    // functions: [],
-  };
-
   doSearchPerson() {
-    /* const subs: Subscription = this.permissionsService
-      .httpSearchUsers(this.searchtext)
-      .subscribe((resp: picklist[]) => {
+    const subs: Subscription = this.permissionsService
+      .searchUsers(this.searchtext)
+      .subscribe((resp: any) => {
         this.searchresult = resp;
         this.searchshowresult = true;
         subs.unsubscribe();
-      }); */
+      });
   }
 
   doGetModules() {
@@ -142,7 +157,7 @@ export class RolePermissionComponent implements OnInit {
     const subs: Subscription = this.permissionsService
       .getModules()
       .subscribe((resp: moduleDetails[]) => {
-        console.log('MODULOS', resp);
+        console.log('MODULOS-->', resp);
         this.moduleList = resp;
         this.loadingModules = false;
         subs.unsubscribe();
@@ -155,19 +170,21 @@ export class RolePermissionComponent implements OnInit {
     this.searchshowresult = false;
   }
 
-  doPickUser(element: picklist) {
-    // this.users.push({ id: element.id, value: element.name });
+  doPickUser(element: any) {
+    this.users.push({ id: element.id, value: element.name });
     this.doCancelSearch();
   }
 
   doPickModule(code: string) {
-    // this.smoduledata = { ...this.moduleList.find(p => p.code == code) };
+    // this.smoduledata = { ...this.moduleList.find((p) => p.code == code) };
     // this.modMenus = this.smoduledata.menus.map((resp) => {
-    //    return { code: resp.code,
-    //             name: resp.name,
-    //             icon: resp.filter,
-    //             selected: false
-    //           }});
+    //   return {
+    //     code: resp.code,
+    //     name: resp.name,
+    //     icon: resp.filter,
+    //     selected: false,
+    //   };
+    // });
 
     // this.msegment = this.smoduledata.segments.map((m) => { return { code: m.code, name: m.name, icon: null, selected: false }});
     // this.mfunction = this.smoduledata.functions.map((m) => { return { code: m.code, name: m.name, lvl: 'N/A' }});

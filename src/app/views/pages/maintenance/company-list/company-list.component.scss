@@ -1,3 +1,28 @@
+.cli-card{
+  min-width: 0;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  height: 100%;
+}
+
+.fit-card{
+  min-height: 70vh;
+  max-width: 1200px;
+  margin: auto;
+}
+.cli-card-body{
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem 2rem;
+}
+
+
+/* TABLA EMPRESAS */
 .tf-hispam {
   font-size: 1.6rem;
   color: #50535a;
@@ -173,7 +198,7 @@ th {
   margin-bottom: 20px;
 }
 .card-title {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: black;
   line-height: 15px;

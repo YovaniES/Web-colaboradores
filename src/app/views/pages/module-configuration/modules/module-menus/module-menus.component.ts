@@ -28,7 +28,7 @@ export class ModuleMenusComponent implements OnInit {
     this.loading = true;
     const subs: Subscription = this.permissionService
       .getAllModules()
-      .subscribe((resp:any) => {
+      .subscribe((resp:Menu[]) => {
         console.log('DATAMENU', resp)
 
         this.listmodules = resp;
@@ -37,7 +37,7 @@ export class ModuleMenusComponent implements OnInit {
       });
   }
 
-  openEditDialog( idx: number, module:any, ismodule: boolean, isnew: boolean, modulename: string = '') {
+  openEditDialog( idx: number, module:Menu, ismodule: boolean, isnew: boolean, modulename: string = '') {
     this.dialog
       .open(ModalEditModuleComponent, { data: { module, ismodule, isnew, modulename } })
       .afterClosed()

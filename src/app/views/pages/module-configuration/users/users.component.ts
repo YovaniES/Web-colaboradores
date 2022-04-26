@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserDTO } from 'src/app/models';
+import { UserDTO } from 'src/app/core/models';
 import { PermissionsService } from 'src/app/services/permissions.service';
 
 @Component({

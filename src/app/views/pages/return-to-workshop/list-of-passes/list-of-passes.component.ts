@@ -49,7 +49,7 @@ export class ListOfPassesComponent implements OnInit {
   }
 
   // VERIFICCAR
-  cambiarPagina() {
+/*   cambiarPagina() {
     this.pagActual += 5;
     if (this.pagActual < 0) {
       this.pagActual = 0;
@@ -57,7 +57,7 @@ export class ListOfPassesComponent implements OnInit {
       this.pagActual -= 5;
     }
     this.getListOfPasses();
-  }
+  } */
 
   nextPage(valor:number) {
     this.pagActual += 5;

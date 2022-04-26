@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { UserDTO } from 'src/app/models';
+import { UsuarioDTO } from 'src/app/core/models';
 import { PermissionsService } from 'src/app/services/permissions.service';
 
 @Component({
@@ -9,7 +9,9 @@ import { PermissionsService } from 'src/app/services/permissions.service';
   styleUrls: ['./users-table.component.scss'],
 })
 export class UsersTableComponent implements OnInit {
-  data!: UserDTO[];
+  // data!: UserDTO[];
+  data!:UsuarioDTO[]
+  // {id:number,nombre:string, correo:string, pais:string[], genero:string[],cargo:string,rol:string, empresa:string[]}
 
   table_settings = {
     page: 1,
@@ -39,8 +41,8 @@ export class UsersTableComponent implements OnInit {
         this.table_settings.size,
         this.searcher
       )
-      .subscribe((r: any) => {
-        this.data = r;
+      .subscribe((resp: any) => {
+        this.data = resp;
         this.loadingItem = false;
         subs.unsubscribe();
       });

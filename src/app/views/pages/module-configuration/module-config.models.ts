@@ -1,4 +1,4 @@
-import { picklist } from "src/app/models";
+import { picklist } from "src/app/core/models";
 
 export interface permissionRequest {
   module: string;

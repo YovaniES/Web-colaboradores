@@ -4,14 +4,14 @@
     <div class="moad-module">
       <div class="moad-module-title">
         <button (click)="showingidx = idx" class="icon-btn btn-s btn-turq">
-          <mat-icon class="icon-20">
-            {{ showingidx == idx ? "keyboard_arrow_down" : "keyboard_arrow_right" }}</mat-icon>
+          <mat-icon class="icon-20">{{ showingidx == idx ? "keyboard_arrow_down" : "keyboard_arrow_right" }}</mat-icon>
         </button>
         <mat-icon
           [ngClass]="{ 'c-green': module.enable, 'c-light': !module.enable }"
           class="icon-18"
-          >{{ module.icon }}</mat-icon
-        >
+          >{{ module.icon }}
+        </mat-icon>
+
         <div class="">{{ module.code }}:</div>
         <div style="margin: 0 10px">{{ module.text }}</div> [{{ module.order }}]
         <div *ngIf="!module.enable" class="moad-inactive">inactivo</div>
@@ -75,8 +75,8 @@
     <!-- NUEVO MÓDULO -->
     <button style="margin-top: 10px"
             class="cli-btn btn-turq"
-            (click)="openEditDialog(0, null, true, true, '')"
             >
+            <!-- (click)="openEditDialog(0, null, true, true, null)" -->
       Nuevo Módulo
     </button>
   </div>

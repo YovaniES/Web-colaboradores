@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, Output, Input, ViewChild, EventEmitter, ElementRef, Renderer2 } from '@angular/core';
-import { picklist } from 'src/app/models';
+import { picklist } from '../../models';
 
 @Component({
   selector: 'cli-picklist',

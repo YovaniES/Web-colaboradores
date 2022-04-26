@@ -1,3 +1,5 @@
+// @import 'variables.scss';
+
 .cli-card{
   min-width: 0;
   display: flex;
@@ -34,12 +36,12 @@
   font-family: 'Telefonica-Bold';
 }
 
-/* .pr-section{
+.pr-section{
   margin-left: 10px;
   padding-left: 20px;
   padding-top: 10px;
   border-left: 2px solid #d3d3d4;
-} */
+}
 
 
 /* PERMISSIONS */
@@ -165,35 +167,6 @@
         width: 25%;
     }
 }
-/* .status-btn{
-  position: relative;
-  margin: 0 5px;
-  & button{
-      display: flex;
-      align-items: center;
-      padding: 2px 10px;
-      border-radius: 2px;
-  }
-}
-.cli-input-white{
-  border: solid 1px #B6B7B7;
-  background-color: #fff;
-  border-radius: 2px;
-  padding: 5px 10px;
-  transition: ease .3s;
-  width: 100%;
-  &:hover:enabled{
-      border-color: #0066FF;
-  }
-  &:focus:enabled{
-      background-color: transparent;
-      border-color: #0066FF;
-  }
-  &:disabled{
-      background-color: #f8f8f8;
-      color: #86888C;
-  }
-} */
 .cli-form{
   &-buttons{
     width: 100%;

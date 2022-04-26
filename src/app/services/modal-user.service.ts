@@ -2,13 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { API_USERS } from '../core/constants/url.constants';
-import { Usuario } from '../models/usuario.models';
+import { UsuarioDTO } from '../core/models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ModalUserService {
-  usuario!:Usuario
 
   constructor(private http: HttpClient) { }
 

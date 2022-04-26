@@ -36,8 +36,8 @@ export class PermissionsService {
   getAllUsers(page: number, size: number, filter?: string, location?: string, status?: number): Observable<Object> {
     let params = "?page=" + page + "&size=" + size;
     params = params + (filter ? "&filter=" + filter : "");
-    params = params + (location ? "&location=" + location : "");
-    params = params + (status ? "&status=" + status : "");
+    /* params = params + (location ? "&location=" + location : "");
+    params = params + (status ? "&status=" + status : ""); */
     return this.http.get(API_USERS + params);;
     // return this.http.get(API_USERS + params).pipe(map(p => p['content']));;
   }

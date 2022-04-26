@@ -28,9 +28,9 @@ export class ModalEditModuleComponent implements OnInit {
     icon: '',
     type: '',
     link: '',
-    submenus: [],
     enable: true,
     module: '',
+    submenus: [],
   };
 
   constructor(
@@ -92,6 +92,7 @@ export class ModalEditModuleComponent implements OnInit {
 }
 
 /* OJO:
+en postMenu -> Crear BD menu
 .subscribe((resp: changeResponse) => {
   .subscribe((resp: any) => {
  */

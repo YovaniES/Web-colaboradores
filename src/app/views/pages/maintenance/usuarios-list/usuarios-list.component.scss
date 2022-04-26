@@ -1,3 +1,22 @@
+.cli-card{
+  min-width: 0;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  height: 100%;
+}
+/* .cli-shadow-1{
+  box-shadow: 0 1px 1px 0 #00000020, 0 2px 5px 0 #00000020;
+} */
+.fit-card{
+  min-height: 70vh;
+  max-width: 1200px;
+  margin: auto;
+}
 table {
   width: 100%;
 }
@@ -51,12 +70,12 @@ th {
 .cli-btn {
   border: solid 1px #00bec0;
   border-radius: 2px;
-  margin: 0 4px;
-  padding: 0 6px;
+  margin: 8px;
+  padding: 0 10px;
   font-family: "Telefonica-Bold" !important;
   display: flex;
   align-items: center;
-  height: 30px;
+  height: 35px;
   color: #00bec0;
   & mat-icon {
     margin: 0 5px;
@@ -168,14 +187,14 @@ th {
   align-items: center;
 }
 
-.row {
+/* .row {
   justify-content: space-between;
   margin-right: 1px;
   margin-left: 1px;
   margin-bottom: 20px;
-}
+} */
 .card-title {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: black;
   line-height: 15px;
@@ -260,7 +279,54 @@ th {
   background-color: #eff1f7;
 }
 
+
 /* style btn - options */
+
+.flex-1{
+  flex: 1 1;
+}
+.status-btn{
+  position: relative;
+  width: fit-content;
+  margin: 0 5px;
+  & button{
+      display: flex;
+      align-items: center;
+      padding: 2px 10px;
+      border-radius: 2px;
+  }
+}
+.cli-tablebar{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3px;
+  border: solid 1px #D3D4D3;
+  border-radius: 2px;
+  margin: 5px 0;
+}
+
+.cli-input-white{
+  border: solid 1px #B6B7B7;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 5px 10px;
+  transition: ease .3s;
+  &:hover:enabled{
+      border-color: #0066FF;
+  }
+  &:focus:enabled{
+      background-color: transparent;
+      border-color: #0066FF;
+  }
+  &:disabled{
+      background-color: #f8f8f8;
+      color: #86888C;
+      //border-color: transparent;
+  }
+}
+
 .icon-btn {
   padding: 2px;
   border: none;
@@ -322,6 +388,7 @@ th {
 
 .label-danger {
   background-color: #ef5350;
+
 }
 
 .label-info {

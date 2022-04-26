@@ -91,6 +91,8 @@
       padding: 5px;
       font-weight: 500;
       text-align: center;
+      background: #00bec0;
+      color: white;
   }
   & td{
       vertical-align: middle;
@@ -135,6 +137,7 @@
   width: 18px !important;
   height: 18px !important;
   font-size: 18px !important;
+  display: flex;
 }
 .cli-pagination{
   &-container{
@@ -150,6 +153,20 @@
       margin: 0 10px;
   }
 }
+
+.icon-btn {
+  padding: 2px;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 0 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  &:disabled {
+    background-color: #f4f4f3;
+    color: #fff;
+  }
+}
 .btn-turq{
   background-color: #59C2C9;
   color: #fff;
@@ -162,4 +179,10 @@
   &:hover:enabled:active{
       background-color: #3E8A8A;
   }
+}
+.c-blue {
+  color: #6abcff;
+}
+.c-fucsia {
+  color: #ff4081;
 }
