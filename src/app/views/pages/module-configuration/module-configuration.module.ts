@@ -17,7 +17,6 @@ import { MaintenanceModule } from '../maintenance/maintenance.module';
     RolePermissionComponent,
     UsersComponent,
     UsersTableComponent,
-
     ModalEditModuleComponent,
     ModuleMenusComponent,
 

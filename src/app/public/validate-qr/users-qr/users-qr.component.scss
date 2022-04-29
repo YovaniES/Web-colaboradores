@@ -133,7 +133,6 @@
 
 .input-codigo {
   width: 25px;
-  // max-width: 25px;
   min-width: 25px;
   text-align: center;
   margin-left: 1px;
@@ -169,7 +168,6 @@
   border-radius: 2px;
   padding: 5px 10px;
   transition: ease 0.3s;
-
   margin: 0px -8px;
   &:hover:enabled {
     border-color: #00bec0;

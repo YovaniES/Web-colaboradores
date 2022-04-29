@@ -1,10 +1,9 @@
-:host {
+/* :host {
   height: 100vh;
   width: 100%;
   position: absolute;
 }
 
-// background: linear-gradient(45deg, black, transparent);
 .cli-body{
   font-family: "Telefonica";
   height: 100%;
@@ -22,24 +21,9 @@
   padding: 20px;
   flex: 1 0 auto;
 }
-.cli-header{
-  background-color: #2B3447;
-  color: #eef9f9;
-  line-height: 56px - 20;
-  height: 56px;
-  box-shadow: 0 1px 1px 0 #00000020, 0 2px 5px 0 #00000020;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 97;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 .logoheader {
   overflow: hidden;
-  //width: 265px;
   height: 56px;
   display: flex;
   color: #e9e1db;
@@ -59,9 +43,7 @@
   margin: 0 0px;
 }
 
-.hlogo {
-  height: 30px;
-}
+
 
 .logo-let {
   display: flex;
@@ -103,21 +85,6 @@
   padding-bottom: 0px;
 }
 
-.btn-fucsia {
-  background-color: #FF4081;
-
-
-  color: #fff;
-  transition: ease 0.3s;
-  cursor: pointer;
-  &:hover:enabled {
-    background-color: #ecd0e8;
-  }
-  &:hover:enabled:active {
-    background-color: #b4dee6;
-  }
-}
-
 
 .cli-btn {
   border: none;
@@ -137,7 +104,40 @@
     color: #fff;
   }
 }
-
+*/
+.cli-header {
+  background-color: #2b3447;
+  color: #eef9f9;
+  line-height: 56px - 20;
+  height: 56px;
+  box-shadow: 0 1px 1px 0 #00000020, 0 2px 5px 0 #00000020;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 97;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btn-fucsia {
+  background-color: #ff4081;
+  margin: 15px;
+  color: #fff;
+  transition: ease 0.3s;
+  cursor: pointer;
+  justify-content: center;
+  width: 90px;
+  &:hover:enabled {
+    background-color: #ecd0e8;
+  }
+  &:hover:enabled:active {
+    background-color: #b4dee6;
+  }
+}
+.hlogo {
+  height: 30px;
+}
 @media (max-width: 850px) {
   .title-header {
     font-size: 13px;
@@ -145,6 +145,7 @@
 
   .logoheader {
     margin-left: 0px;
+    margin: 10px;
   }
 
   .personname {
@@ -155,16 +156,17 @@
     font-size: 0px;
   }
 
-
   .logo-let {
     font-size: 0.9rem;
     margin-left: 4px;
   }
 
   .cli-btn {
-  // height: 28px;
-  margin: 4px;
-  // padding: 0 14px;
-  // font-size: 12px;
+    margin: 4px;
+  }
+
+  .btn-fucsia {
+    width: 70px;
+    margin: 10px;
   }
 }

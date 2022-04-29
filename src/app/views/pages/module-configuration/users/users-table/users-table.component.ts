@@ -9,9 +9,7 @@ import { PermissionsService } from 'src/app/services/permissions.service';
   styleUrls: ['./users-table.component.scss'],
 })
 export class UsersTableComponent implements OnInit {
-  // data!: UserDTO[];
   data!:UsuarioDTO[]
-  // {id:number,nombre:string, correo:string, pais:string[], genero:string[],cargo:string,rol:string, empresa:string[]}
 
   table_settings = {
     page: 1,

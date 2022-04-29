@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { Subscription } from 'rxjs';
 import { picklist } from 'src/app/core/models';
-// import { changeResponse, picklist } from 'src/app/models';
 import { PermissionsService } from 'src/app/services/permissions.service';
 import Swal from 'sweetalert2';
 import {

@@ -1,18 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { PermissionsService } from 'src/app/services/permissions.service';
-
-export interface Menu {
-  code: string;
-  text: string;
-  order: number;
-  icon: string;
-  type: string;
-  link: string;
-  submenus: Menu[];
-  enable: boolean;
-  module: string;
-  displayed?: boolean;
-}
+import { Menu } from 'src/app/core/models';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -24,16 +12,17 @@ export class SidebarComponent implements OnInit {
   fixedAside = false;
   menuList: Menu[] = [];
 
-  constructor(private permissionService: PermissionsService) {}
+  constructor(private menuService: MenuService) {}
 
   ngOnInit(): void {
-    this.getMenu()
+    this.getMenu();
   }
 
+  /**llamammos la lista de menus desde nuestro JSON-SERVER */
   getMenu() {
-    this.permissionService.getMenu().subscribe((resp) => {
+    this.menuService.getMenu().subscribe((resp) => {
       this.menuList = resp;
-      console.log('DATA',resp)
+      console.log('DATA', resp);
     });
   }
 

@@ -1,8 +1,9 @@
+<!-- SIDE -->
 <div
   class="cli-aside"
   [ngClass]="{ 'cli-aside-fixed': fixedAside, 'cli-aside-hover': !fixedAside }"
 >
-  <!-- Burbuja -->
+  <!-- Boton desplegar MENU -->
   <div
     [ngClass]="{ 'btn-toggle-rotated': !fixedAside }"
     class="aside-btn-float"
@@ -55,7 +56,7 @@
         <a
           (click)="clickLinkMenu()"
           class="menu-link"
-          [routerLink]="'home'"
+          [routerLink]="'/home'"
           routerLinkActive="active-link"
         >
           <i class="submenu-icon">
@@ -83,18 +84,13 @@
       [ngClass]="{ 'menu-link-open': item.displayed }"
       class="menu-link"
     >
-      <i class="menu-icon"
-        ><mat-icon>{{ item.icon }}</mat-icon></i
-      >
+      <i class="menu-icon"><mat-icon>{{ item.icon }}</mat-icon></i>
       <span *ngIf="fixedAside">{{ item.text }}</span>
-      <i
-        *ngIf="fixedAside"
-        [ngClass]="{ 'menu-arrow-open': item.displayed }"
-        class="menu-arrow"
-        ><mat-icon aria-hidden="false" aria-label="Example home icon"
-          >keyboard_arrow_right</mat-icon
-        ></i
-      >
+      <i *ngIf="fixedAside"
+         [ngClass]="{ 'menu-arrow-open': item.displayed }"
+         class="menu-arrow"
+        ><mat-icon aria-hidden="false">keyboard_arrow_right</mat-icon
+        ></i>
     </div>
 
     <!-- SUB MENUS -->
@@ -112,8 +108,6 @@
       </div>
     </ng-container>
   </li>
-
-  <!-- MENUS DIRECTO-->
 </ng-template>
 
 <!-- LISTA DE SUB MENUS -->
@@ -148,7 +142,6 @@
   </li>
 </ng-template>
 
-<!-- HOVER -->
 <!-- LISTA DE SUB MENUS HOVER -->
 <ng-template #subMenuItemsHover let-item="item">
   <div class="sub-menu sub-menu-displayed">

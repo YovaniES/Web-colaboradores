@@ -10,10 +10,12 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
   public myLoginForm: FormGroup = this.fb.group({
-     username: [ localStorage.getItem('username') || 'gherson.perez@telefonica.com', [Validators.required, Validators.email]],
-     password: ['hola', [Validators.required, Validators.minLength(4)]],
+    username: [
+      localStorage.getItem('username') || 'gherson.perez@telefonica.com',
+      [Validators.required, Validators.email],
+    ],
+    password: ['hola', [Validators.required, Validators.minLength(4)]],
   });
 
   constructor(
@@ -27,20 +29,15 @@ export class LoginComponent implements OnInit {
   login() {
     const { username, password } = this.myLoginForm.value;
 
-    this.authService.login( username, password )
-      .subscribe( ok => {
-        console.log('VALOR :',ok)
-        if ( ok === true ) {
-
-          this.router.navigateByUrl('/home');
-        } else{
-          Swal.fire('Error', 'Credenciales Erroneas', 'error');
-
-        }
-      });
+    this.authService.login(username, password).subscribe((ok) => {
+      console.log('VALOR :', ok);
+      if (ok === true) {
+        this.router.navigateByUrl('/home');
+      } else {
+        Swal.fire('Error', 'Credenciales Erroneas', 'error');
+      }
+    });
   }
-
-
 
   campoNoValido(campo: string): boolean {
     if (
@@ -52,5 +49,4 @@ export class LoginComponent implements OnInit {
       return false;
     }
   }
-
 }

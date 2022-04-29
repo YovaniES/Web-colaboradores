@@ -14,7 +14,6 @@
 }
 
 .personname{
-  // color: #fff;
   line-height: 56px;
   margin: 0 5px;
   text-shadow: 0 1px 3px #0000002a;
@@ -82,7 +81,6 @@
   overflow: hidden;
   height: 56px;
   padding: 15px;
-  // width: 265px;
   display: flex;
   color: #2B3447;
   font-size: 1.1rem;
@@ -205,10 +203,8 @@
 
 @media (max-width: 850px) {
   .personname{
-    // color: #fff;
     line-height: 56px;
     margin: 0 5px;
-    // position: fixed;
     display: none;
   }
 

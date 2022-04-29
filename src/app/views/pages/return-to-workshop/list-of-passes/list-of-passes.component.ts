@@ -48,16 +48,6 @@ export class ListOfPassesComponent implements OnInit {
     });
   }
 
-  // VERIFICCAR
-/*   cambiarPagina() {
-    this.pagActual += 5;
-    if (this.pagActual < 0) {
-      this.pagActual = 0;
-    } else {
-      this.pagActual -= 5;
-    }
-    this.getListOfPasses();
-  } */
 
   nextPage(valor:number) {
     this.pagActual += 5;

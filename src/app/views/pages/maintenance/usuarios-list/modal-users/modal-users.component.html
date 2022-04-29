@@ -3,7 +3,7 @@
 </button>
 
 <div class="modal-title">
-  {{ editData ? "Actualizar" : "Crear" }} Colaborador
+  {{ editData ? "Actualizar" : "Crear" }} usuario
 </div>
 
 <form class="cli-row" [formGroup]="usuariosForm">
@@ -17,7 +17,7 @@
         formControlName="nombre"
         class="form-control"
         class="cli-input-emerald"
-        placeholder="Nombre del colaborador"
+        placeholder="Nombre del usuario"
       />
     </div>
   </div>
@@ -37,7 +37,7 @@
   </div>
 
   <div class="cli-form-element col-f-2">
-    <label class="col-sm-3">Rol del colaborador</label>
+    <label class="col-sm-3">Rol del usuario</label>
     <div class="col-sm-9"style="padding: 0;">
       <span class="cli-input-group"><mat-icon>manage_accounts</mat-icon> </span>
       <select class="cli-input-emerald"

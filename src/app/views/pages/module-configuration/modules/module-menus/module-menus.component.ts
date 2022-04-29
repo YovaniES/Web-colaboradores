@@ -49,5 +49,3 @@ export class ModuleMenusComponent implements OnInit {
       });
   }
 }
-
-// (click)="openEditDialog(0, null, true, true, null)"

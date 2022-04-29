@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { PublicRoutingModule } from './public-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { PublicComponent } from './validate-qr/public.component';
@@ -20,7 +19,6 @@ import { BlockUIModule } from 'ng-block-ui';
     CommonModule,
     PublicRoutingModule,
     LayoutModule,
-
     ReactiveFormsModule,
     FormsModule,
     NgQrScannerModule,

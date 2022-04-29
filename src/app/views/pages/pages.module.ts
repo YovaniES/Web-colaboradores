@@ -8,10 +8,8 @@ import { CoreModule } from 'src/app/core/core.module';
 
   imports: [
    CoreModule,
-
     MaterialModule,
   ],
-
   exports: [],
 })
 export class PagesModule {}

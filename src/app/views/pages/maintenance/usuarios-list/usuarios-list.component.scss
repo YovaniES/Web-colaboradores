@@ -9,9 +9,7 @@
   overflow: hidden;
   height: 100%;
 }
-/* .cli-shadow-1{
-  box-shadow: 0 1px 1px 0 #00000020, 0 2px 5px 0 #00000020;
-} */
+
 .fit-card{
   min-height: 70vh;
   max-width: 1200px;
@@ -187,12 +185,6 @@ th {
   align-items: center;
 }
 
-/* .row {
-  justify-content: space-between;
-  margin-right: 1px;
-  margin-left: 1px;
-  margin-bottom: 20px;
-} */
 .card-title {
   font-size: 1.3rem;
   font-weight: bold;
@@ -280,8 +272,6 @@ th {
 }
 
 
-/* style btn - options */
-
 .flex-1{
   flex: 1 1;
 }
@@ -323,7 +313,6 @@ th {
   &:disabled{
       background-color: #f8f8f8;
       color: #86888C;
-      //border-color: transparent;
   }
 }
 
