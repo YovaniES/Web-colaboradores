@@ -9,7 +9,7 @@ import { MenuService } from 'src/app/services/menu.service';
 })
 export class SidebarComponent implements OnInit {
   @Output() generalfixedAside = new EventEmitter<Boolean>();
-  fixedAside = false;
+  fixedAside = true;
   menuList: Menu[] = [];
 
   constructor(private menuService: MenuService) {}

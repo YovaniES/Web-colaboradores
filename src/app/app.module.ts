@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 import { AuthModule } from './views/auth/auth.module';
 import { BlockUIModule } from 'ng-block-ui';
-import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -16,10 +15,9 @@ import { MaterialModule } from './material/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     BlockUIModule.forRoot(),
-    BrowserAnimationsModule,
-    MaterialModule,
     AuthModule,
     LayoutModule,
   ],

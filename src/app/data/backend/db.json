@@ -159,6 +159,16 @@
       "empresa": "EXPERIS",
       "rol": "GESTOR",
       "id": 16
+    },
+    {
+      "nombre": "aahahahaa",
+      "correo": "abc@gmail.com",
+      "pais": "COL",
+      "genero": "F",
+      "cargo": "asadfrff",
+      "empresa": "INDRA",
+      "rol": "GESTOR",
+      "id": 17
     }
   ],
   "CompanyList": [
@@ -216,9 +226,24 @@
       "code": "ADM",
       "name": "Administración",
       "menus": [
-        {"id": 1,"code": "ADM-001","name": "usuario","filter": "usu"},
-        {"id": 2,"code": "ADM-002","name": "Permisos","filter": "per"},
-        {"id": 3,"code": "ADM-003","name": "Módulos","filter": "mod" }
+        {
+          "id": 1,
+          "code": "ADM-001",
+          "name": "usuario",
+          "filter": "usu"
+        },
+        {
+          "id": 2,
+          "code": "ADM-002",
+          "name": "Permisos",
+          "filter": "per"
+        },
+        {
+          "id": 3,
+          "code": "ADM-003",
+          "name": "Módulos",
+          "filter": "mod"
+        }
       ]
     },
     {

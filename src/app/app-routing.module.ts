@@ -19,15 +19,15 @@ const routes: Routes = [
     path: '',
     component: BaseComponent,
     children: [
+      { path: 'home',
+        loadChildren: () => import('./views/pages/home/home.module').then(m => m.HomeModule),
+        canActivate: [ValidarTokenGuard],
+      },
       { path: 'terceros',
         loadChildren: () => import('./views/pages/return-to-workshop/return-to-workshop.module').then((m) => m.ReturnToWorkshopModule),
       },
       { path:'mantenimiento',
         loadChildren: () => import('./views/pages/maintenance/maintenance.module').then(m => m.MaintenanceModule)
-      },
-      { path: 'home',
-        loadChildren: () => import('./views/pages/home/home.module').then(m => m.HomeModule),
-        canActivate: [ValidarTokenGuard],
       },
       { path: 'administracion',
         loadChildren: () => import('./views/pages/module-configuration/module-configuration.module').then(m => m.ModuleConfigurationModule)

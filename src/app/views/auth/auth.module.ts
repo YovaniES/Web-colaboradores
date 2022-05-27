@@ -11,8 +11,8 @@ import { CoreModule } from 'src/app/core/core.module';
   ],
 
   imports: [
-    CoreModule,
     AuthRoutingModule,
+    CoreModule,
     MatIconModule,
   ],
   exports: [LoginComponent],
